@@ -56,9 +56,11 @@ To decompress use the bzip2 tool:
 
 This command will get rid of the original dump. To preserve it add the -k option
 
-The main script rpki-validator takes the decompressed RIB dump as a parameter.
+The main script rpki-validator takes the decompressed RIB dump as a parameter, as well as the host and
+port of the cache. If the cache is running locally with the default configuration of the RIPE RPKI
+Validator is `localhost` on port `8282`.
 
-    ./rpki-validator.sh rib.dump
+    ./rpki-validator.sh rib.dump host port
 
 
 # Analyzing the result
