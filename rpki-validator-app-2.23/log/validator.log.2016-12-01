@@ -1,0 +1,263 @@
+2016-12-01 16:38:32,955 INFO	[main] Main$ Starting up the RPKI validator...
+2016-12-01 16:38:33,269 INFO	[main] Main Prefer RRDP=false
+2016-12-01 16:38:33,287 INFO	[main] PersistentDataSerialiser$ Config file does not exist: File 'data/data.json' does not exist
+2016-12-01 16:38:33,320 INFO	[main] TrustAnchors$ Loading trust anchors...
+2016-12-01 16:38:33,378 INFO	[main] RTRServer RTR server listening on 0.0.0.0/0.0.0.0:8282
+2016-12-01 16:38:33,390 INFO	[main] log Logging initialized @950ms
+2016-12-01 16:38:33,506 INFO	[main] Server jetty-9.2.17.v20160517
+2016-12-01 16:38:33,559 INFO	[main] ContextHandler Started o.e.j.s.ServletContextHandler@207b8649{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,AVAILABLE}
+2016-12-01 16:38:33,561 INFO	[main] AbstractNCSARequestLog Opened /home/colin/rpki-validator-app-2.23/log/access.log.2016_12_01
+2016-12-01 16:38:33,565 INFO	[main] ServerConnector Started ServerConnector@42f48531{HTTP/1.1}{0.0.0.0:8080}
+2016-12-01 16:38:33,565 INFO	[main] Server Started @1127ms
+2016-12-01 16:38:33,566 INFO	[main] Main Welcome to the RIPE NCC RPKI Validator, now available on port 8080. Hit CTRL+C to terminate.
+2016-12-01 16:38:33,938 WARN	[default-akka.actor.default-dispatcher-6] LoggingOutputStream Dec 01, 2016 4:38:33 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.apache.derby.jdbc.EmbeddedDriver
+
+2016-12-01 16:38:35,143 INFO	[default-akka.actor.default-dispatcher-4] BgpRisDumpDownloader Retrieved 39888 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv6.gz, last modified at 2016-12-01T11:06:03.000+01:00
+2016-12-01 16:38:35,259 INFO	[default-akka.actor.default-dispatcher-4] BgpRisDump$ toAnnouncedRoutes time 0.114 seconds
+2016-12-01 16:38:36,240 INFO	[default-akka.actor.default-dispatcher-3] BgpRisDumpDownloader Retrieved 706228 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv4.gz, last modified at 2016-12-01T11:03:14.000+01:00
+2016-12-01 16:38:37,254 INFO	[default-akka.actor.default-dispatcher-6] MetaDataTableImpl Creating Metadata table: "APP"."schema_version"
+2016-12-01 16:38:37,287 INFO	[default-akka.actor.default-dispatcher-3] BgpRisDump$ toAnnouncedRoutes time 1.047 seconds
+2016-12-01 16:38:37,321 INFO	[default-akka.actor.default-dispatcher-3] BgpAnnouncementValidator Started validating 698169 BGP announcements with 0 RTR prefixes.
+2016-12-01 16:38:37,652 INFO	[default-akka.actor.default-dispatcher-3] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 0 RTR prefixes in 0.319 seconds
+2016-12-01 16:38:37,765 INFO	[default-akka.actor.default-dispatcher-6] DbMigrate Current version of schema "APP": << Empty Schema >>
+2016-12-01 16:38:37,765 INFO	[default-akka.actor.default-dispatcher-6] DbMigrate Migrating schema "APP" to version 1
+2016-12-01 16:38:37,901 INFO	[default-akka.actor.default-dispatcher-6] DbMigrate Migrating schema "APP" to version 2
+2016-12-01 16:38:37,995 INFO	[default-akka.actor.default-dispatcher-6] DbMigrate Migrating schema "APP" to version 3
+2016-12-01 16:38:38,075 INFO	[default-akka.actor.default-dispatcher-6] DbMigrate Migrating schema "APP" to version 4
+2016-12-01 16:38:38,167 INFO	[default-akka.actor.default-dispatcher-6] DbMigrate Migrating schema "APP" to version 5
+2016-12-01 16:38:38,217 INFO	[default-akka.actor.default-dispatcher-6] DbMigrate Migrating schema "APP" to version 6
+2016-12-01 16:38:38,318 INFO	[default-akka.actor.default-dispatcher-6] DbMigrate Migrating schema "APP" to version 7
+2016-12-01 16:38:38,422 INFO	[default-akka.actor.default-dispatcher-6] DbMigrate Migrating schema "APP" to version 8
+2016-12-01 16:38:38,470 INFO	[default-akka.actor.default-dispatcher-6] DbMigrate Successfully applied 8 migrations to schema "APP" (execution time 00:01.218s).
+2016-12-01 16:38:39,442 INFO	[default-akka.actor.default-dispatcher-10] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:38:39,450 INFO	[default-akka.actor.default-dispatcher-10] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-01 16:38:39,453 INFO	[default-akka.actor.default-dispatcher-10] RsyncFetcher Downloading the repository rsync://rpki.ripe.net/repository/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.ripe.net/repository
+2016-12-01 16:38:41,220 INFO	[default-akka.actor.default-dispatcher-3] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:38:41,221 INFO	[default-akka.actor.default-dispatcher-3] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-01 16:38:41,221 INFO	[default-akka.actor.default-dispatcher-3] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/member_repository/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/member_repository
+2016-12-01 16:38:41,227 INFO	[default-akka.actor.default-dispatcher-12] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:38:41,227 INFO	[default-akka.actor.default-dispatcher-12] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-01 16:38:41,248 INFO	[default-akka.actor.default-dispatcher-8] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:38:41,249 INFO	[default-akka.actor.default-dispatcher-8] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-01 16:38:41,257 INFO	[default-akka.actor.default-dispatcher-7] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:38:41,257 INFO	[default-akka.actor.default-dispatcher-7] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-01 16:38:41,517 INFO	[default-akka.actor.default-dispatcher-2] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:38:41,517 INFO	[default-akka.actor.default-dispatcher-2] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-01 16:38:42,306 INFO	[default-akka.actor.default-dispatcher-13] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:38:42,307 INFO	[default-akka.actor.default-dispatcher-13] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-01 16:38:42,307 INFO	[default-akka.actor.default-dispatcher-13] RsyncFetcher Downloading the repository rsync://repository.lacnic.net/rpki/ to /home/colin/rpki-validator-app-2.23/data/rsync/repository.lacnic.net/rpki
+2016-12-01 16:38:43,311 INFO	[default-akka.actor.default-dispatcher-6] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:38:43,311 INFO	[default-akka.actor.default-dispatcher-6] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-01 16:38:43,312 INFO	[default-akka.actor.default-dispatcher-6] RsyncFetcher Downloading the repository rsync://rpki.afrinic.net/repository/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.afrinic.net/repository
+2016-12-01 16:38:50,411 INFO	[default-akka.actor.default-dispatcher-6] CacheStore Updated validationTime for 351 objects.
+2016-12-01 16:38:51,758 INFO	[default-akka.actor.default-dispatcher-6] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 8.446s.
+2016-12-01 16:38:51,791 INFO	[default-akka.actor.default-dispatcher-6] BgpAnnouncementValidator Started validating 698169 BGP announcements with 172 RTR prefixes.
+2016-12-01 16:38:52,380 INFO	[default-akka.actor.default-dispatcher-6] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 172 RTR prefixes in 0.532 seconds
+2016-12-01 16:38:52,381 INFO	[default-akka.actor.default-dispatcher-6] RTRServer Sending Notify with serial 1 to all clients
+2016-12-01 16:39:23,061 INFO	[default-akka.actor.default-dispatcher-3] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/838DB214166511E2B3BC286172FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/838DB214166511E2B3BC286172FD1FF2
+2016-12-01 16:39:23,062 INFO	[default-akka.actor.default-dispatcher-12] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/592C3A9A166511E28225E22D72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/592C3A9A166511E28225E22D72FD1FF2
+2016-12-01 16:39:23,062 INFO	[default-akka.actor.default-dispatcher-8] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/7E3C4EF6166511E2B936276172FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/7E3C4EF6166511E2B936276172FD1FF2
+2016-12-01 16:39:23,062 INFO	[default-akka.actor.default-dispatcher-7] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/78C99096166511E29955056172FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/78C99096166511E29955056172FD1FF2
+2016-12-01 16:39:23,062 INFO	[default-akka.actor.default-dispatcher-2] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/71D3CDC4166511E29148186072FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/71D3CDC4166511E29148186072FD1FF2
+2016-12-01 16:39:25,997 INFO	[default-akka.actor.default-dispatcher-12] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B322A5F41D6611E2A3F27F7C72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B322A5F41D6611E2A3F27F7C72FD1FF2
+2016-12-01 16:39:26,005 INFO	[default-akka.actor.default-dispatcher-8] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B4A1BEA61D6611E2B2CD8B7C72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B4A1BEA61D6611E2B2CD8B7C72FD1FF2
+2016-12-01 16:39:26,011 INFO	[default-akka.actor.default-dispatcher-7] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B41FE6101D6611E2A62F877C72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B41FE6101D6611E2A62F877C72FD1FF2
+2016-12-01 16:39:26,056 INFO	[default-akka.actor.default-dispatcher-3] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B527EF581D6611E2BB468F7C72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B527EF581D6611E2BB468F7C72FD1FF2
+2016-12-01 16:39:26,076 INFO	[default-akka.actor.default-dispatcher-2] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B3A24F201D6611E28AC8837C72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B3A24F201D6611E28AC8837C72FD1FF2
+2016-12-01 16:39:28,996 INFO	[default-akka.actor.default-dispatcher-8] CacheStore Updated validationTime for 5 objects.
+2016-12-01 16:39:29,115 INFO	[default-akka.actor.default-dispatcher-8] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 47.866s.
+2016-12-01 16:39:29,139 INFO	[default-akka.actor.default-dispatcher-7] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/jpnic/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/jpnic
+2016-12-01 16:39:29,151 INFO	[default-akka.actor.default-dispatcher-8] BgpAnnouncementValidator Started validating 698169 BGP announcements with 172 RTR prefixes.
+2016-12-01 16:39:29,624 INFO	[default-akka.actor.default-dispatcher-8] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 172 RTR prefixes in 0.469 seconds
+2016-12-01 16:39:29,624 INFO	[default-akka.actor.default-dispatcher-8] RTRServer Sending Notify with serial 2 to all clients
+2016-12-01 16:39:33,665 INFO	[default-akka.actor.default-dispatcher-6] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30003/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30003
+2016-12-01 16:39:33,670 INFO	[default-akka.actor.default-dispatcher-7] CacheStore Updated validationTime for 14 objects.
+2016-12-01 16:39:33,682 INFO	[default-akka.actor.default-dispatcher-8] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/1639/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/1639
+2016-12-01 16:39:33,682 INFO	[default-akka.actor.default-dispatcher-5] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/2432/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/2432
+2016-12-01 16:39:33,683 INFO	[default-akka.actor.default-dispatcher-11] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/2490/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/2490
+2016-12-01 16:39:33,776 INFO	[default-akka.actor.default-dispatcher-7] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 52.519s.
+2016-12-01 16:39:33,799 INFO	[default-akka.actor.default-dispatcher-7] BgpAnnouncementValidator Started validating 698169 BGP announcements with 172 RTR prefixes.
+2016-12-01 16:39:34,618 INFO	[default-akka.actor.default-dispatcher-7] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 172 RTR prefixes in 0.817 seconds
+2016-12-01 16:39:34,618 INFO	[default-akka.actor.default-dispatcher-7] RTRServer Sending Notify with serial 3 to all clients
+2016-12-01 16:39:34,619 INFO	[default-akka.actor.default-dispatcher-7] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/1003/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/1003
+2016-12-01 16:39:36,258 INFO	[default-akka.actor.default-dispatcher-12] CacheStore Updated validationTime for 32 objects.
+2016-12-01 16:39:36,470 INFO	[default-akka.actor.default-dispatcher-12] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 55.243s.
+2016-12-01 16:39:36,493 INFO	[default-akka.actor.default-dispatcher-12] BgpAnnouncementValidator Started validating 698169 BGP announcements with 172 RTR prefixes.
+2016-12-01 16:39:37,003 INFO	[default-akka.actor.default-dispatcher-12] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 172 RTR prefixes in 0.509 seconds
+2016-12-01 16:39:37,003 INFO	[default-akka.actor.default-dispatcher-12] RTRServer Sending Notify with serial 4 to all clients
+2016-12-01 16:39:37,263 INFO	[default-akka.actor.default-dispatcher-2] CacheStore Updated validationTime for 143 objects.
+2016-12-01 16:39:37,690 INFO	[default-akka.actor.default-dispatcher-2] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 56.172s.
+2016-12-01 16:39:37,777 INFO	[default-akka.actor.default-dispatcher-2] BgpAnnouncementValidator Started validating 698169 BGP announcements with 191 RTR prefixes.
+2016-12-01 16:39:38,114 INFO	[default-akka.actor.default-dispatcher-2] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 191 RTR prefixes in 0.336 seconds
+2016-12-01 16:39:38,114 INFO	[default-akka.actor.default-dispatcher-2] RTRServer Sending Notify with serial 5 to all clients
+2016-12-01 16:39:43,657 INFO	[default-akka.actor.default-dispatcher-19] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30058/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30058
+2016-12-01 16:39:43,657 INFO	[default-akka.actor.default-dispatcher-6] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/598/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/598
+2016-12-01 16:39:43,657 INFO	[default-akka.actor.default-dispatcher-9] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30045/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30045
+2016-12-01 16:39:43,657 INFO	[default-akka.actor.default-dispatcher-31] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/545/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/545
+2016-12-01 16:39:43,657 INFO	[default-akka.actor.default-dispatcher-16] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/12207/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/12207
+2016-12-01 16:39:43,657 INFO	[default-akka.actor.default-dispatcher-28] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/285/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/285
+2016-12-01 16:39:43,658 INFO	[default-akka.actor.default-dispatcher-24] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30091/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30091
+2016-12-01 16:39:43,658 INFO	[default-akka.actor.default-dispatcher-4] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/11207/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/11207
+2016-12-01 16:39:43,658 INFO	[default-akka.actor.default-dispatcher-33] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/699/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/699
+2016-12-01 16:39:43,658 INFO	[default-akka.actor.default-dispatcher-25] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/9/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/9
+2016-12-01 16:39:43,658 INFO	[default-akka.actor.default-dispatcher-14] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30279/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30279
+2016-12-01 16:39:43,657 INFO	[default-akka.actor.default-dispatcher-15] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30228/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30228
+2016-12-01 16:39:43,684 INFO	[default-akka.actor.default-dispatcher-8] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30155/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30155
+2016-12-01 16:39:43,686 INFO	[default-akka.actor.default-dispatcher-20] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30156/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30156
+2016-12-01 16:39:43,686 INFO	[default-akka.actor.default-dispatcher-35] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30193/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30193
+2016-12-01 16:39:43,687 INFO	[default-akka.actor.default-dispatcher-7] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/10207/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/10207
+2016-12-01 16:39:43,688 INFO	[default-akka.actor.default-dispatcher-29] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/2285/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/2285
+2016-12-01 16:39:43,690 INFO	[default-akka.actor.default-dispatcher-11] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/55/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/55
+2016-12-01 16:39:43,691 INFO	[default-akka.actor.default-dispatcher-23] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/13131/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/13131
+2016-12-01 16:39:43,692 INFO	[default-akka.actor.default-dispatcher-34] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/1562/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/1562
+2016-12-01 16:39:43,693 INFO	[default-akka.actor.default-dispatcher-21] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/207/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/207
+2016-12-01 16:39:47,595 INFO	[default-akka.actor.default-dispatcher-3] CacheStore Updated validationTime for 2584 objects.
+2016-12-01 16:39:50,388 INFO	[default-akka.actor.default-dispatcher-13] CacheStore Updated validationTime for 3329 objects.
+2016-12-01 16:39:53,918 INFO	[default-akka.actor.default-dispatcher-3] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2584 valid objects; spent 72.697s.
+2016-12-01 16:39:54,028 INFO	[default-akka.actor.default-dispatcher-3] BgpAnnouncementValidator Started validating 698169 BGP announcements with 5420 RTR prefixes.
+2016-12-01 16:39:54,626 INFO	[default-akka.actor.default-dispatcher-3] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 5420 RTR prefixes in 0.575 seconds
+2016-12-01 16:39:54,626 INFO	[default-akka.actor.default-dispatcher-3] RTRServer Sending Notify with serial 6 to all clients
+2016-12-01 16:39:57,388 INFO	[default-akka.actor.default-dispatcher-13] ValidationProcess Finished validating LACNIC RPKI Root, 3329 valid objects; spent 75.081s.
+2016-12-01 16:39:57,435 INFO	[default-akka.actor.default-dispatcher-13] BgpAnnouncementValidator Started validating 698169 BGP announcements with 7608 RTR prefixes.
+2016-12-01 16:39:58,016 INFO	[default-akka.actor.default-dispatcher-13] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 7608 RTR prefixes in 0.562 seconds
+2016-12-01 16:39:58,018 INFO	[default-akka.actor.default-dispatcher-13] RTRServer Sending Notify with serial 7 to all clients
+2016-12-01 16:39:58,967 INFO	[default-akka.actor.default-dispatcher-16] RsyncFetcher Downloading the repository rsync://ca.rg.net/rpki/RGnet/ to /home/colin/rpki-validator-app-2.23/data/rsync/ca.rg.net/rpki/RGnet
+2016-12-01 16:40:09,483 INFO	[default-akka.actor.default-dispatcher-10] CacheStore Updated validationTime for 16425 objects.
+2016-12-01 16:40:29,328 INFO	[default-akka.actor.default-dispatcher-10] ValidationProcess Finished validating RIPE NCC RPKI Root, 16426 valid objects; spent 109.877s.
+2016-12-01 16:40:29,423 INFO	[default-akka.actor.default-dispatcher-10] BgpAnnouncementValidator Started validating 698169 BGP announcements with 28352 RTR prefixes.
+2016-12-01 16:40:30,015 INFO	[default-akka.actor.default-dispatcher-10] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 28352 RTR prefixes in 0.547 seconds
+2016-12-01 16:40:30,015 INFO	[default-akka.actor.default-dispatcher-10] RTRServer Sending Notify with serial 8 to all clients
+2016-12-01 16:49:55,857 INFO	[default-akka.actor.default-dispatcher-43] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:49:55,857 INFO	[default-akka.actor.default-dispatcher-43] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-01 16:49:55,858 INFO	[default-akka.actor.default-dispatcher-43] RsyncFetcher Downloading the repository rsync://rpki.afrinic.net/repository/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.afrinic.net/repository
+2016-12-01 16:49:59,262 INFO	[default-akka.actor.default-dispatcher-43] CacheStore Updated validationTime for 351 objects.
+2016-12-01 16:50:00,008 INFO	[default-akka.actor.default-dispatcher-43] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 4.15s.
+2016-12-01 16:50:00,109 INFO	[default-akka.actor.default-dispatcher-43] BgpAnnouncementValidator Started validating 698169 BGP announcements with 28352 RTR prefixes.
+2016-12-01 16:50:00,738 INFO	[default-akka.actor.default-dispatcher-43] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 28352 RTR prefixes in 0.594 seconds
+2016-12-01 16:50:00,738 INFO	[default-akka.actor.default-dispatcher-43] RTRServer Sending Notify with serial 9 to all clients
+2016-12-01 16:50:36,264 INFO	[default-akka.actor.default-dispatcher-70] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:50:36,264 INFO	[default-akka.actor.default-dispatcher-70] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-01 16:50:36,264 INFO	[default-akka.actor.default-dispatcher-70] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/member_repository/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/member_repository
+2016-12-01 16:50:46,248 INFO	[default-akka.actor.default-dispatcher-53] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:50:46,248 INFO	[default-akka.actor.default-dispatcher-53] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-01 16:50:46,294 INFO	[default-akka.actor.default-dispatcher-60] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:50:46,295 INFO	[default-akka.actor.default-dispatcher-60] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-01 16:50:46,302 INFO	[default-akka.actor.default-dispatcher-50] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:50:46,303 INFO	[default-akka.actor.default-dispatcher-50] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-01 16:50:46,768 INFO	[default-akka.actor.default-dispatcher-70] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/7E3C4EF6166511E2B936276172FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/7E3C4EF6166511E2B936276172FD1FF2
+2016-12-01 16:50:46,768 INFO	[default-akka.actor.default-dispatcher-53] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/78C99096166511E29955056172FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/78C99096166511E29955056172FD1FF2
+2016-12-01 16:50:46,768 INFO	[default-akka.actor.default-dispatcher-50] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/592C3A9A166511E28225E22D72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/592C3A9A166511E28225E22D72FD1FF2
+2016-12-01 16:50:46,768 INFO	[default-akka.actor.default-dispatcher-60] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/71D3CDC4166511E29148186072FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/71D3CDC4166511E29148186072FD1FF2
+2016-12-01 16:50:49,420 INFO	[default-akka.actor.default-dispatcher-53] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B41FE6101D6611E2A62F877C72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B41FE6101D6611E2A62F877C72FD1FF2
+2016-12-01 16:50:49,427 INFO	[default-akka.actor.default-dispatcher-70] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B4A1BEA61D6611E2B2CD8B7C72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B4A1BEA61D6611E2B2CD8B7C72FD1FF2
+2016-12-01 16:50:49,447 INFO	[default-akka.actor.default-dispatcher-60] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B3A24F201D6611E28AC8837C72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B3A24F201D6611E28AC8837C72FD1FF2
+2016-12-01 16:50:49,452 INFO	[default-akka.actor.default-dispatcher-50] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B322A5F41D6611E2A3F27F7C72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B322A5F41D6611E2A3F27F7C72FD1FF2
+2016-12-01 16:50:52,060 INFO	[default-akka.actor.default-dispatcher-70] CacheStore Updated validationTime for 5 objects.
+2016-12-01 16:50:52,224 INFO	[default-akka.actor.default-dispatcher-70] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 15.96s.
+2016-12-01 16:50:52,233 INFO	[default-akka.actor.default-dispatcher-53] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/jpnic/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/jpnic
+2016-12-01 16:50:52,294 INFO	[default-akka.actor.default-dispatcher-70] BgpAnnouncementValidator Started validating 698169 BGP announcements with 28352 RTR prefixes.
+2016-12-01 16:50:52,887 INFO	[default-akka.actor.default-dispatcher-70] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 28352 RTR prefixes in 0.552 seconds
+2016-12-01 16:50:52,887 INFO	[default-akka.actor.default-dispatcher-70] RTRServer Sending Notify with serial 10 to all clients
+2016-12-01 16:50:55,085 INFO	[default-akka.actor.default-dispatcher-5] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30003/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30003
+2016-12-01 16:50:55,090 INFO	[default-akka.actor.default-dispatcher-53] CacheStore Updated validationTime for 14 objects.
+2016-12-01 16:50:55,094 INFO	[default-akka.actor.default-dispatcher-70] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/2490/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/2490
+2016-12-01 16:50:55,094 INFO	[default-akka.actor.default-dispatcher-71] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/1639/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/1639
+2016-12-01 16:50:55,094 INFO	[default-akka.actor.default-dispatcher-73] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/2432/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/2432
+2016-12-01 16:50:55,096 INFO	[default-akka.actor.default-dispatcher-62] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/1003/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/1003
+2016-12-01 16:50:55,134 INFO	[default-akka.actor.default-dispatcher-53] CacheStore Clear old objects -> deleted 2 objects for which exists a valid alternative.
+2016-12-01 16:50:55,274 INFO	[default-akka.actor.default-dispatcher-53] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 9.026s.
+2016-12-01 16:50:55,340 INFO	[default-akka.actor.default-dispatcher-53] BgpAnnouncementValidator Started validating 698169 BGP announcements with 28352 RTR prefixes.
+2016-12-01 16:50:56,146 INFO	[default-akka.actor.default-dispatcher-53] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 28352 RTR prefixes in 0.77 seconds
+2016-12-01 16:50:56,146 INFO	[default-akka.actor.default-dispatcher-53] RTRServer Sending Notify with serial 11 to all clients
+2016-12-01 16:50:57,515 INFO	[default-akka.actor.default-dispatcher-50] CacheStore Updated validationTime for 32 objects.
+2016-12-01 16:50:57,547 INFO	[default-akka.actor.default-dispatcher-60] CacheStore Updated validationTime for 143 objects.
+2016-12-01 16:50:57,744 INFO	[default-akka.actor.default-dispatcher-50] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 11.441s.
+2016-12-01 16:50:57,838 INFO	[default-akka.actor.default-dispatcher-50] BgpAnnouncementValidator Started validating 698169 BGP announcements with 28352 RTR prefixes.
+2016-12-01 16:50:57,909 INFO	[default-akka.actor.default-dispatcher-60] CacheStore Clear old objects -> deleted 6 objects for which exists a valid alternative.
+2016-12-01 16:50:58,241 INFO	[default-akka.actor.default-dispatcher-60] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 11.946s.
+2016-12-01 16:50:58,393 INFO	[default-akka.actor.default-dispatcher-60] BgpAnnouncementValidator Started validating 698169 BGP announcements with 28352 RTR prefixes.
+2016-12-01 16:50:58,415 INFO	[default-akka.actor.default-dispatcher-50] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 28352 RTR prefixes in 0.539 seconds
+2016-12-01 16:50:58,415 INFO	[default-akka.actor.default-dispatcher-50] RTRServer Sending Notify with serial 12 to all clients
+2016-12-01 16:50:58,911 INFO	[default-akka.actor.default-dispatcher-60] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 28352 RTR prefixes in 0.485 seconds
+2016-12-01 16:50:58,911 INFO	[default-akka.actor.default-dispatcher-60] RTRServer Sending Notify with serial 13 to all clients
+2016-12-01 16:51:06,382 INFO	[default-akka.actor.default-dispatcher-72] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:51:06,383 INFO	[default-akka.actor.default-dispatcher-72] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-01 16:51:06,383 INFO	[default-akka.actor.default-dispatcher-72] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/838DB214166511E2B3BC286172FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/838DB214166511E2B3BC286172FD1FF2
+2016-12-01 16:51:06,388 INFO	[default-akka.actor.default-dispatcher-71] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:51:06,388 INFO	[default-akka.actor.default-dispatcher-71] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-01 16:51:06,388 INFO	[default-akka.actor.default-dispatcher-71] RsyncFetcher Downloading the repository rsync://repository.lacnic.net/rpki/ to /home/colin/rpki-validator-app-2.23/data/rsync/repository.lacnic.net/rpki
+2016-12-01 16:51:09,066 INFO	[default-akka.actor.default-dispatcher-72] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B527EF581D6611E2BB468F7C72FD1FF2/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B527EF581D6611E2BB468F7C72FD1FF2
+2016-12-01 16:51:14,285 INFO	[default-akka.actor.default-dispatcher-50] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30228/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30228
+2016-12-01 16:51:14,285 INFO	[default-akka.actor.default-dispatcher-62] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30045/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30045
+2016-12-01 16:51:14,285 INFO	[default-akka.actor.default-dispatcher-74] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/545/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/545
+2016-12-01 16:51:14,285 INFO	[default-akka.actor.default-dispatcher-85] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/285/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/285
+2016-12-01 16:51:14,286 INFO	[default-akka.actor.default-dispatcher-73] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/10207/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/10207
+2016-12-01 16:51:14,286 INFO	[default-akka.actor.default-dispatcher-83] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/9/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/9
+2016-12-01 16:51:14,286 INFO	[default-akka.actor.default-dispatcher-75] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/598/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/598
+2016-12-01 16:51:14,286 INFO	[default-akka.actor.default-dispatcher-96] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30091/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30091
+2016-12-01 16:51:14,286 INFO	[default-akka.actor.default-dispatcher-94] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/1562/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/1562
+2016-12-01 16:51:14,286 INFO	[default-akka.actor.default-dispatcher-5] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/2285/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/2285
+2016-12-01 16:51:14,286 INFO	[default-akka.actor.default-dispatcher-95] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/699/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/699
+2016-12-01 16:51:14,286 INFO	[default-akka.actor.default-dispatcher-79] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/11207/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/11207
+2016-12-01 16:51:14,287 INFO	[default-akka.actor.default-dispatcher-80] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30058/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30058
+2016-12-01 16:51:14,288 INFO	[default-akka.actor.default-dispatcher-87] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30279/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30279
+2016-12-01 16:51:14,288 INFO	[default-akka.actor.default-dispatcher-57] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/12207/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/12207
+2016-12-01 16:51:14,289 INFO	[default-akka.actor.default-dispatcher-90] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30193/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30193
+2016-12-01 16:51:14,290 INFO	[default-akka.actor.default-dispatcher-91] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/207/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/207
+2016-12-01 16:51:14,290 INFO	[default-akka.actor.default-dispatcher-92] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30155/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30155
+2016-12-01 16:51:14,290 INFO	[default-akka.actor.default-dispatcher-70] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/55/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/55
+2016-12-01 16:51:14,291 INFO	[default-akka.actor.default-dispatcher-78] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30156/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30156
+2016-12-01 16:51:14,292 INFO	[default-akka.actor.default-dispatcher-76] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/13131/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/13131
+2016-12-01 16:51:16,537 INFO	[default-akka.actor.default-dispatcher-71] CacheStore Updated validationTime for 3329 objects.
+2016-12-01 16:51:17,134 INFO	[default-akka.actor.default-dispatcher-72] CacheStore Updated validationTime for 2584 objects.
+2016-12-01 16:51:23,515 INFO	[default-akka.actor.default-dispatcher-72] CacheStore Clear old objects -> deleted 112 objects for which exists a valid alternative.
+2016-12-01 16:51:23,641 INFO	[default-akka.actor.default-dispatcher-72] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2584 valid objects; spent 17.258s.
+2016-12-01 16:51:23,709 INFO	[default-akka.actor.default-dispatcher-72] BgpAnnouncementValidator Started validating 698169 BGP announcements with 28352 RTR prefixes.
+2016-12-01 16:51:24,287 INFO	[default-akka.actor.default-dispatcher-72] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 28352 RTR prefixes in 0.543 seconds
+2016-12-01 16:51:24,287 INFO	[default-akka.actor.default-dispatcher-72] RTRServer Sending Notify with serial 14 to all clients
+2016-12-01 16:51:24,375 INFO	[default-akka.actor.default-dispatcher-71] ValidationProcess Finished validating LACNIC RPKI Root, 3329 valid objects; spent 17.987s.
+2016-12-01 16:51:24,461 INFO	[default-akka.actor.default-dispatcher-71] BgpAnnouncementValidator Started validating 698169 BGP announcements with 28352 RTR prefixes.
+2016-12-01 16:51:24,986 INFO	[default-akka.actor.default-dispatcher-71] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 28352 RTR prefixes in 0.492 seconds
+2016-12-01 16:51:24,986 INFO	[default-akka.actor.default-dispatcher-71] RTRServer Sending Notify with serial 15 to all clients
+2016-12-01 16:51:34,260 INFO	[default-akka.actor.default-dispatcher-56] CacheStore Updated validationTime for 1 objects.
+2016-12-01 16:51:34,261 INFO	[default-akka.actor.default-dispatcher-56] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-01 16:51:34,261 INFO	[default-akka.actor.default-dispatcher-56] RsyncFetcher Downloading the repository rsync://rpki.ripe.net/repository/ to /home/colin/rpki-validator-app-2.23/data/rsync/rpki.ripe.net/repository
+2016-12-01 16:51:54,343 INFO	[default-akka.actor.default-dispatcher-56] RsyncFetcher Downloading the repository rsync://ca.rg.net/rpki/RGnet/ to /home/colin/rpki-validator-app-2.23/data/rsync/ca.rg.net/rpki/RGnet
+2016-12-01 16:52:03,937 INFO	[default-akka.actor.default-dispatcher-56] CacheStore Updated validationTime for 16425 objects.
+2016-12-01 16:52:33,930 INFO	[default-akka.actor.default-dispatcher-56] CacheStore Clear old objects -> deleted 6 objects for which exists a valid alternative.
+2016-12-01 16:52:34,089 INFO	[default-akka.actor.default-dispatcher-56] ValidationProcess Finished validating RIPE NCC RPKI Root, 16426 valid objects; spent 59.828s.
+2016-12-01 16:52:34,203 INFO	[default-akka.actor.default-dispatcher-56] BgpAnnouncementValidator Started validating 698169 BGP announcements with 28352 RTR prefixes.
+2016-12-01 16:52:34,751 INFO	[default-akka.actor.default-dispatcher-56] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 28352 RTR prefixes in 0.512 seconds
+2016-12-01 16:52:34,751 INFO	[default-akka.actor.default-dispatcher-56] RTRServer Sending Notify with serial 16 to all clients
+2016-12-01 16:53:56,425 INFO	[shutdownHook2] ServerConnector Stopped ServerConnector@42f48531{HTTP/1.1}{0.0.0.0:8080}
+2016-12-01 16:53:56,425 INFO	[shutdownHook1] RTRServer RTR server stopped
+2016-12-01 16:53:56,427 INFO	[shutdownHook2] ContextHandler Stopped o.e.j.s.ServletContextHandler@207b8649{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,UNAVAILABLE}
+2016-12-01 16:53:56,427 INFO	[shutdownHook2] Main Terminating...
+2016-12-01 16:57:18,686 INFO	[main] Main$ Starting up the RPKI validator...
+2016-12-01 16:57:18,967 INFO	[main] Main Prefer RRDP=false
+2016-12-01 16:57:18,984 INFO	[main] PersistentDataSerialiser$ Config file does not exist: File 'data/data.json' does not exist
+2016-12-01 16:57:19,015 INFO	[main] TrustAnchors$ Loading trust anchors...
+2016-12-01 16:57:19,791 INFO	[main] RTRServer RTR server listening on 0.0.0.0/0.0.0.0:8282
+2016-12-01 16:57:19,801 INFO	[main] log Logging initialized @1500ms
+2016-12-01 16:57:19,915 INFO	[main] Server jetty-9.2.17.v20160517
+2016-12-01 16:57:19,948 INFO	[main] ContextHandler Started o.e.j.s.ServletContextHandler@1d0d6318{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,AVAILABLE}
+2016-12-01 16:57:19,950 INFO	[main] AbstractNCSARequestLog Opened /home/colin/rpki-validator-app-2.23/log/access.log.2016_12_01
+2016-12-01 16:57:19,954 INFO	[main] ServerConnector Started ServerConnector@3543df7d{HTTP/1.1}{0.0.0.0:8080}
+2016-12-01 16:57:19,954 INFO	[main] Server Started @1655ms
+2016-12-01 16:57:19,955 INFO	[main] Main Welcome to the RIPE NCC RPKI Validator, now available on port 8080. Hit CTRL+C to terminate.
+2016-12-01 16:57:20,292 WARN	[default-akka.actor.default-dispatcher-4] LoggingOutputStream Dec 01, 2016 4:57:20 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.apache.derby.jdbc.EmbeddedDriver
+
+2016-12-01 16:57:21,659 INFO	[default-akka.actor.default-dispatcher-6] BgpRisDumpDownloader Retrieved 39888 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv6.gz, last modified at 2016-12-01T11:06:03.000+01:00
+2016-12-01 16:57:21,832 INFO	[default-akka.actor.default-dispatcher-6] BgpRisDump$ toAnnouncedRoutes time 0.169 seconds
+2016-12-01 16:57:22,373 INFO	[default-akka.actor.default-dispatcher-4] DbMigrate Current version of schema "APP": 8
+2016-12-01 16:57:22,373 INFO	[default-akka.actor.default-dispatcher-4] DbMigrate Schema "APP" is up to date. No migration necessary.
+2016-12-01 16:57:23,129 INFO	[default-akka.actor.default-dispatcher-5] BgpRisDumpDownloader Retrieved 706228 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv4.gz, last modified at 2016-12-01T11:03:14.000+01:00
+2016-12-01 16:57:23,609 INFO	[default-akka.actor.default-dispatcher-5] BgpRisDump$ toAnnouncedRoutes time 0.48 seconds
+2016-12-01 16:57:23,645 INFO	[default-akka.actor.default-dispatcher-5] BgpAnnouncementValidator Started validating 698169 BGP announcements with 0 RTR prefixes.
+2016-12-01 16:57:24,179 INFO	[default-akka.actor.default-dispatcher-5] BgpAnnouncementValidator Completed validating 698169 BGP announcements with 0 RTR prefixes in 0.524 seconds
+2016-12-01 18:29:23,899 INFO	[shutdownHook2] ServerConnector Stopped ServerConnector@3543df7d{HTTP/1.1}{0.0.0.0:8080}
+2016-12-01 18:29:23,900 INFO	[shutdownHook2] ContextHandler Stopped o.e.j.s.ServletContextHandler@1d0d6318{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,UNAVAILABLE}
+2016-12-01 18:29:23,900 INFO	[shutdownHook1] RTRServer RTR server stopped
+2016-12-01 18:29:23,901 INFO	[shutdownHook2] Main Terminating...

@@ -1,0 +1,113 @@
+2016-12-02 16:25:49,686 INFO	[main] Main$ Starting up the RPKI validator...
+2016-12-02 16:25:50,087 INFO	[main] Main Prefer RRDP=false
+2016-12-02 16:25:50,115 INFO	[main] PersistentDataSerialiser$ Config file does not exist: File 'data/data.json' does not exist
+2016-12-02 16:25:50,154 INFO	[main] TrustAnchors$ Loading trust anchors...
+2016-12-02 16:25:50,206 INFO	[main] RTRServer RTR server listening on 0.0.0.0/0.0.0.0:8282
+2016-12-02 16:25:50,221 INFO	[main] log Logging initialized @1160ms
+2016-12-02 16:25:50,391 INFO	[main] Server jetty-9.2.17.v20160517
+2016-12-02 16:25:50,446 INFO	[main] ContextHandler Started o.e.j.s.ServletContextHandler@18cebaa5{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,AVAILABLE}
+2016-12-02 16:25:50,449 INFO	[main] AbstractNCSARequestLog Opened /home/colin/rpki-validator-app-2.23/log/access.log.2016_12_02
+2016-12-02 16:25:50,454 INFO	[main] ServerConnector Started ServerConnector@45905bff{HTTP/1.1}{0.0.0.0:8080}
+2016-12-02 16:25:50,454 INFO	[main] Server Started @1394ms
+2016-12-02 16:25:50,454 INFO	[main] Main Welcome to the RIPE NCC RPKI Validator, now available on port 8080. Hit CTRL+C to terminate.
+2016-12-02 16:25:51,052 WARN	[default-akka.actor.default-dispatcher-4] LoggingOutputStream Dec 02, 2016 4:25:51 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.apache.derby.jdbc.EmbeddedDriver
+
+2016-12-02 16:25:52,270 INFO	[default-akka.actor.default-dispatcher-6] BgpRisDumpDownloader Retrieved 40092 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv6.gz, last modified at 2016-12-02T11:06:03.000+01:00
+2016-12-02 16:25:52,484 INFO	[default-akka.actor.default-dispatcher-6] BgpRisDump$ toAnnouncedRoutes time 0.214 seconds
+2016-12-02 16:25:52,809 INFO	[default-akka.actor.default-dispatcher-4] DbMigrate Current version of schema "APP": 8
+2016-12-02 16:25:52,818 INFO	[default-akka.actor.default-dispatcher-4] DbMigrate Schema "APP" is up to date. No migration necessary.
+2016-12-02 16:25:53,810 INFO	[default-akka.actor.default-dispatcher-5] BgpRisDumpDownloader Retrieved 702190 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv4.gz, last modified at 2016-12-02T11:03:13.000+01:00
+2016-12-02 16:25:54,282 INFO	[default-akka.actor.default-dispatcher-5] BgpRisDump$ toAnnouncedRoutes time 0.471 seconds
+2016-12-02 16:25:54,308 INFO	[default-akka.actor.default-dispatcher-5] BgpAnnouncementValidator Started validating 693268 BGP announcements with 0 RTR prefixes.
+2016-12-02 16:25:54,931 INFO	[default-akka.actor.default-dispatcher-5] BgpAnnouncementValidator Completed validating 693268 BGP announcements with 0 RTR prefixes in 0.607 seconds
+2016-12-02 16:37:04,108 INFO	[shutdownHook2] ServerConnector Stopped ServerConnector@45905bff{HTTP/1.1}{0.0.0.0:8080}
+2016-12-02 16:37:04,110 INFO	[shutdownHook2] ContextHandler Stopped o.e.j.s.ServletContextHandler@18cebaa5{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,UNAVAILABLE}
+2016-12-02 16:37:04,111 INFO	[shutdownHook2] Main Terminating...
+2016-12-02 16:37:04,111 INFO	[shutdownHook1] RTRServer RTR server stopped
+2016-12-02 16:37:06,178 INFO	[main] Main$ Starting up the RPKI validator...
+2016-12-02 16:37:06,499 INFO	[main] Main Prefer RRDP=false
+2016-12-02 16:37:06,736 INFO	[main] TrustAnchors$ Loading trust anchors...
+2016-12-02 16:37:06,811 INFO	[main] RTRServer RTR server listening on 0.0.0.0/0.0.0.0:8282
+2016-12-02 16:37:06,820 INFO	[main] log Logging initialized @1044ms
+2016-12-02 16:37:06,914 INFO	[main] Server jetty-9.2.17.v20160517
+2016-12-02 16:37:06,975 INFO	[main] ContextHandler Started o.e.j.s.ServletContextHandler@3af4e0bf{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,AVAILABLE}
+2016-12-02 16:37:06,976 INFO	[main] AbstractNCSARequestLog Opened /home/colin/rpki-validator-app-2.23/log/access.log.2016_12_02
+2016-12-02 16:37:06,984 INFO	[main] ServerConnector Started ServerConnector@7b7e3615{HTTP/1.1}{0.0.0.0:8080}
+2016-12-02 16:37:06,984 INFO	[main] Server Started @1208ms
+2016-12-02 16:37:06,984 INFO	[main] Main Welcome to the RIPE NCC RPKI Validator, now available on port 8080. Hit CTRL+C to terminate.
+2016-12-02 16:37:07,160 WARN	[default-akka.actor.default-dispatcher-3] LoggingOutputStream Dec 02, 2016 4:37:07 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.apache.derby.jdbc.EmbeddedDriver
+
+2016-12-02 16:37:08,342 INFO	[default-akka.actor.default-dispatcher-3] DbMigrate Current version of schema "APP": 8
+2016-12-02 16:37:08,343 INFO	[default-akka.actor.default-dispatcher-3] DbMigrate Schema "APP" is up to date. No migration necessary.
+2016-12-02 16:37:08,903 INFO	[default-akka.actor.default-dispatcher-2] BgpRisDumpDownloader Retrieved 40092 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv6.gz, last modified at 2016-12-02T11:06:03.000+01:00
+2016-12-02 16:37:09,034 INFO	[default-akka.actor.default-dispatcher-2] BgpRisDump$ toAnnouncedRoutes time 0.13 seconds
+2016-12-02 16:37:10,800 INFO	[default-akka.actor.default-dispatcher-6] BgpRisDumpDownloader Retrieved 702190 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv4.gz, last modified at 2016-12-02T11:03:13.000+01:00
+2016-12-02 16:37:11,414 INFO	[default-akka.actor.default-dispatcher-6] BgpRisDump$ toAnnouncedRoutes time 0.613 seconds
+2016-12-02 16:37:11,452 INFO	[default-akka.actor.default-dispatcher-6] BgpAnnouncementValidator Started validating 693268 BGP announcements with 0 RTR prefixes.
+2016-12-02 16:37:11,955 INFO	[default-akka.actor.default-dispatcher-6] BgpAnnouncementValidator Completed validating 693268 BGP announcements with 0 RTR prefixes in 0.494 seconds
+2016-12-02 16:37:19,690 INFO	[shutdownHook2] ServerConnector Stopped ServerConnector@7b7e3615{HTTP/1.1}{0.0.0.0:8080}
+2016-12-02 16:37:19,691 INFO	[shutdownHook1] RTRServer RTR server stopped
+2016-12-02 16:37:19,692 INFO	[shutdownHook2] ContextHandler Stopped o.e.j.s.ServletContextHandler@3af4e0bf{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,UNAVAILABLE}
+2016-12-02 16:37:19,693 INFO	[shutdownHook2] Main Terminating...
+2016-12-02 17:31:57,453 INFO	[main] Main$ Starting up the RPKI validator...
+2016-12-02 17:31:57,736 INFO	[main] Main Prefer RRDP=false
+2016-12-02 17:31:57,948 INFO	[main] TrustAnchors$ Loading trust anchors...
+2016-12-02 17:31:58,020 INFO	[main] RTRServer RTR server listening on 0.0.0.0/0.0.0.0:8282
+2016-12-02 17:31:58,029 INFO	[main] log Logging initialized @958ms
+2016-12-02 17:31:58,120 INFO	[main] Server jetty-9.2.17.v20160517
+2016-12-02 17:31:58,152 INFO	[main] ContextHandler Started o.e.j.s.ServletContextHandler@3af4e0bf{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,AVAILABLE}
+2016-12-02 17:31:58,153 INFO	[main] AbstractNCSARequestLog Opened /home/colin/rpki-validator-app-2.23/log/access.log.2016_12_02
+2016-12-02 17:31:58,157 INFO	[main] ServerConnector Started ServerConnector@37cd92d6{HTTP/1.1}{0.0.0.0:8080}
+2016-12-02 17:31:58,158 INFO	[main] Server Started @1087ms
+2016-12-02 17:31:58,158 INFO	[main] Main Welcome to the RIPE NCC RPKI Validator, now available on port 8080. Hit CTRL+C to terminate.
+2016-12-02 17:31:58,412 WARN	[default-akka.actor.default-dispatcher-4] LoggingOutputStream Dec 02, 2016 5:31:58 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.apache.derby.jdbc.EmbeddedDriver
+
+2016-12-02 17:31:59,645 INFO	[default-akka.actor.default-dispatcher-4] DbMigrate Current version of schema "APP": 8
+2016-12-02 17:31:59,645 INFO	[default-akka.actor.default-dispatcher-4] DbMigrate Schema "APP" is up to date. No migration necessary.
+2016-12-02 17:31:59,997 INFO	[default-akka.actor.default-dispatcher-5] BgpRisDumpDownloader Retrieved 40092 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv6.gz, last modified at 2016-12-02T11:06:03.000+01:00
+2016-12-02 17:32:00,127 INFO	[default-akka.actor.default-dispatcher-5] BgpRisDump$ toAnnouncedRoutes time 0.129 seconds
+2016-12-02 17:32:01,166 INFO	[default-akka.actor.default-dispatcher-2] BgpRisDumpDownloader Retrieved 702190 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv4.gz, last modified at 2016-12-02T11:03:13.000+01:00
+2016-12-02 17:32:01,634 INFO	[default-akka.actor.default-dispatcher-2] BgpRisDump$ toAnnouncedRoutes time 0.468 seconds
+2016-12-02 17:32:01,669 INFO	[default-akka.actor.default-dispatcher-2] BgpAnnouncementValidator Started validating 693268 BGP announcements with 0 RTR prefixes.
+2016-12-02 17:32:02,184 INFO	[default-akka.actor.default-dispatcher-2] BgpAnnouncementValidator Completed validating 693268 BGP announcements with 0 RTR prefixes in 0.506 seconds
+2016-12-02 17:40:17,760 INFO	[New I/O server boss #1 ([id: 0x000a776e, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:57464
+2016-12-02 17:40:17,792 INFO	[New I/O server boss #1 ([id: 0x000a776e, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:57466
+2016-12-02 17:40:17,794 INFO	[New I/O server worker #1-1] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:57464
+2016-12-02 17:44:35,923 INFO	[New I/O server worker #1-2] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:57466
+2016-12-02 17:45:35,237 INFO	[New I/O server boss #1 ([id: 0x000a776e, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:57592
+2016-12-02 17:45:35,238 INFO	[New I/O server worker #1-3] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:57592
+2016-12-02 17:45:35,239 INFO	[New I/O server boss #1 ([id: 0x000a776e, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:57594
+2016-12-02 17:47:33,554 INFO	[shutdownHook1] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:57594
+2016-12-02 17:47:33,555 INFO	[shutdownHook2] ServerConnector Stopped ServerConnector@37cd92d6{HTTP/1.1}{0.0.0.0:8080}
+2016-12-02 17:47:33,557 INFO	[shutdownHook1] RTRServer RTR server stopped
+2016-12-02 17:47:33,557 INFO	[shutdownHook2] ContextHandler Stopped o.e.j.s.ServletContextHandler@3af4e0bf{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,UNAVAILABLE}
+2016-12-02 17:47:33,558 INFO	[shutdownHook2] Main Terminating...
+2016-12-02 17:48:57,549 INFO	[main] Main$ Starting up the RPKI validator...
+2016-12-02 17:48:57,833 INFO	[main] Main Prefer RRDP=false
+2016-12-02 17:48:58,048 INFO	[main] TrustAnchors$ Loading trust anchors...
+2016-12-02 17:48:58,119 INFO	[main] RTRServer RTR server listening on 0.0.0.0/0.0.0.0:8282
+2016-12-02 17:48:58,128 INFO	[main] log Logging initialized @965ms
+2016-12-02 17:48:58,218 INFO	[main] Server jetty-9.2.17.v20160517
+2016-12-02 17:48:58,251 INFO	[main] ContextHandler Started o.e.j.s.ServletContextHandler@4d63b624{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,AVAILABLE}
+2016-12-02 17:48:58,252 INFO	[main] AbstractNCSARequestLog Opened /home/colin/rpki-validator-app-2.23/log/access.log.2016_12_02
+2016-12-02 17:48:58,256 INFO	[main] ServerConnector Started ServerConnector@4263b080{HTTP/1.1}{0.0.0.0:8080}
+2016-12-02 17:48:58,256 INFO	[main] Server Started @1094ms
+2016-12-02 17:48:58,257 INFO	[main] Main Welcome to the RIPE NCC RPKI Validator, now available on port 8080. Hit CTRL+C to terminate.
+2016-12-02 17:48:58,540 WARN	[default-akka.actor.default-dispatcher-2] LoggingOutputStream Dec 02, 2016 5:48:58 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.apache.derby.jdbc.EmbeddedDriver
+
+2016-12-02 17:48:59,956 INFO	[default-akka.actor.default-dispatcher-2] DbMigrate Current version of schema "APP": 8
+2016-12-02 17:48:59,957 INFO	[default-akka.actor.default-dispatcher-2] DbMigrate Schema "APP" is up to date. No migration necessary.
+2016-12-02 17:49:00,247 INFO	[default-akka.actor.default-dispatcher-6] BgpRisDumpDownloader Retrieved 40092 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv6.gz, last modified at 2016-12-02T11:06:03.000+01:00
+2016-12-02 17:49:00,389 INFO	[default-akka.actor.default-dispatcher-6] BgpRisDump$ toAnnouncedRoutes time 0.141 seconds
+2016-12-02 17:49:01,518 INFO	[default-akka.actor.default-dispatcher-5] BgpRisDumpDownloader Retrieved 702190 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv4.gz, last modified at 2016-12-02T11:03:13.000+01:00
+2016-12-02 17:49:01,993 INFO	[default-akka.actor.default-dispatcher-5] BgpRisDump$ toAnnouncedRoutes time 0.475 seconds
+2016-12-02 17:49:02,029 INFO	[default-akka.actor.default-dispatcher-5] BgpAnnouncementValidator Started validating 693268 BGP announcements with 0 RTR prefixes.
+2016-12-02 17:49:02,475 INFO	[default-akka.actor.default-dispatcher-5] BgpAnnouncementValidator Completed validating 693268 BGP announcements with 0 RTR prefixes in 0.437 seconds
+2016-12-02 17:49:12,039 INFO	[shutdownHook2] ServerConnector Stopped ServerConnector@4263b080{HTTP/1.1}{0.0.0.0:8080}
+2016-12-02 17:49:12,039 INFO	[shutdownHook1] RTRServer RTR server stopped
+2016-12-02 17:49:12,041 INFO	[shutdownHook2] ContextHandler Stopped o.e.j.s.ServletContextHandler@4d63b624{/,jar:file:/home/colin/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,UNAVAILABLE}
+2016-12-02 17:49:12,044 INFO	[shutdownHook2] Main Terminating...

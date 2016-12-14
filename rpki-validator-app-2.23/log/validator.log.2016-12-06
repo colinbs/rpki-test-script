@@ -1,0 +1,945 @@
+2016-12-06 13:01:34,450 INFO	[main] Main$ Starting up the RPKI validator...
+2016-12-06 13:01:34,821 INFO	[main] Main Prefer RRDP=false
+2016-12-06 13:01:35,066 INFO	[main] TrustAnchors$ Loading trust anchors...
+2016-12-06 13:01:35,906 INFO	[main] RTRServer RTR server listening on 0.0.0.0/0.0.0.0:8282
+2016-12-06 13:01:35,919 INFO	[main] log Logging initialized @2008ms
+2016-12-06 13:01:36,022 INFO	[main] Server jetty-9.2.17.v20160517
+2016-12-06 13:01:36,058 INFO	[main] ContextHandler Started o.e.j.s.ServletContextHandler@62f87c44{/,jar:file:/home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,AVAILABLE}
+2016-12-06 13:01:36,060 INFO	[main] AbstractNCSARequestLog Opened /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/log/access.log.2016_12_06
+2016-12-06 13:01:36,064 INFO	[main] ServerConnector Started ServerConnector@7c18432b{HTTP/1.1}{0.0.0.0:8080}
+2016-12-06 13:01:36,064 INFO	[main] Server Started @2153ms
+2016-12-06 13:01:36,065 INFO	[main] Main Welcome to the RIPE NCC RPKI Validator, now available on port 8080. Hit CTRL+C to terminate.
+2016-12-06 13:01:36,586 WARN	[default-akka.actor.default-dispatcher-2] LoggingOutputStream Dec 06, 2016 1:01:36 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.apache.derby.jdbc.EmbeddedDriver
+
+2016-12-06 13:01:37,907 INFO	[default-akka.actor.default-dispatcher-4] BgpRisDumpDownloader Retrieved 40145 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv6.gz, last modified at 2016-12-06T11:06:03.000+01:00
+2016-12-06 13:01:38,198 INFO	[default-akka.actor.default-dispatcher-4] BgpRisDump$ toAnnouncedRoutes time 0.29 seconds
+2016-12-06 13:01:39,072 INFO	[default-akka.actor.default-dispatcher-2] DbMigrate Current version of schema "APP": 8
+2016-12-06 13:01:39,072 INFO	[default-akka.actor.default-dispatcher-2] DbMigrate Schema "APP" is up to date. No migration necessary.
+2016-12-06 13:01:39,602 INFO	[default-akka.actor.default-dispatcher-5] BgpRisDumpDownloader Retrieved 703298 entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv4.gz, last modified at 2016-12-06T11:03:17.000+01:00
+2016-12-06 13:01:40,082 INFO	[default-akka.actor.default-dispatcher-5] BgpRisDump$ toAnnouncedRoutes time 0.48 seconds
+2016-12-06 13:01:40,137 INFO	[default-akka.actor.default-dispatcher-5] BgpAnnouncementValidator Started validating 694271 BGP announcements with 0 RTR prefixes.
+2016-12-06 13:01:40,175 INFO	[default-akka.actor.default-dispatcher-12] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:01:40,213 INFO	[default-akka.actor.default-dispatcher-12] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 13:01:40,218 INFO	[default-akka.actor.default-dispatcher-12] RsyncFetcher Downloading the repository rsync://rpki.ripe.net/repository/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.ripe.net/repository
+2016-12-06 13:01:40,709 INFO	[default-akka.actor.default-dispatcher-5] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 0 RTR prefixes in 0.484 seconds
+2016-12-06 13:01:40,732 INFO	[default-akka.actor.default-dispatcher-5] BgpAnnouncementValidator Started validating 694271 BGP announcements with 0 RTR prefixes.
+2016-12-06 13:01:40,940 INFO	[default-akka.actor.default-dispatcher-5] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 0 RTR prefixes in 0.208 seconds
+2016-12-06 13:01:41,901 INFO	[default-akka.actor.default-dispatcher-2] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:01:41,901 INFO	[default-akka.actor.default-dispatcher-2] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 13:01:41,901 INFO	[default-akka.actor.default-dispatcher-2] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/member_repository/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/member_repository
+2016-12-06 13:01:41,909 INFO	[default-akka.actor.default-dispatcher-4] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:01:41,909 INFO	[default-akka.actor.default-dispatcher-4] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 13:01:41,917 INFO	[default-akka.actor.default-dispatcher-8] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:01:41,917 INFO	[default-akka.actor.default-dispatcher-8] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 13:01:41,926 INFO	[default-akka.actor.default-dispatcher-11] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:01:41,926 INFO	[default-akka.actor.default-dispatcher-11] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 13:01:42,120 INFO	[default-akka.actor.default-dispatcher-6] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:01:42,121 INFO	[default-akka.actor.default-dispatcher-6] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 13:01:42,266 INFO	[default-akka.actor.default-dispatcher-9] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:01:42,267 INFO	[default-akka.actor.default-dispatcher-9] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 13:01:42,267 INFO	[default-akka.actor.default-dispatcher-9] RsyncFetcher Downloading the repository rsync://rpki.afrinic.net/repository/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.afrinic.net/repository
+2016-12-06 13:01:44,022 INFO	[default-akka.actor.default-dispatcher-10] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:01:44,023 INFO	[default-akka.actor.default-dispatcher-10] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 13:01:44,024 INFO	[default-akka.actor.default-dispatcher-10] RsyncFetcher Downloading the repository rsync://repository.lacnic.net/rpki/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/repository.lacnic.net/rpki
+2016-12-06 13:01:49,086 INFO	[default-akka.actor.default-dispatcher-9] CacheStore Updated validationTime for 351 objects.
+2016-12-06 13:01:50,588 INFO	[default-akka.actor.default-dispatcher-9] CacheStore Clear old objects -> deleted 146 objects for which exists a valid alternative.
+2016-12-06 13:01:50,784 INFO	[pool-4-thread-1] CacheStore Clear old objects -> deleted 1 object(s) last time validated before 2016-12-05T12:01:39.128Z
+2016-12-06 13:01:51,892 INFO	[pool-4-thread-1] CacheStore Clear old objects -> deleted 1859 object(s) downloaded 24 hours before 2016-12-06T12:01:39.128Z and never validated
+2016-12-06 13:01:51,893 INFO	[default-akka.actor.default-dispatcher-9] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 9.625s.
+2016-12-06 13:01:52,060 INFO	[default-akka.actor.default-dispatcher-9] BgpAnnouncementValidator Started validating 694271 BGP announcements with 172 RTR prefixes.
+2016-12-06 13:01:52,914 INFO	[default-akka.actor.default-dispatcher-9] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 172 RTR prefixes in 0.675 seconds
+2016-12-06 13:01:52,915 INFO	[default-akka.actor.default-dispatcher-9] RTRServer Sending Notify with serial 1 to all clients
+2016-12-06 13:02:04,227 INFO	[default-akka.actor.default-dispatcher-10] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 13:02:14,115 INFO	[default-akka.actor.default-dispatcher-10] CacheStore Clear old objects -> deleted 1693 objects for which exists a valid alternative.
+2016-12-06 13:02:14,301 INFO	[default-akka.actor.default-dispatcher-10] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 30.278s.
+2016-12-06 13:02:14,374 INFO	[default-akka.actor.default-dispatcher-10] BgpAnnouncementValidator Started validating 694271 BGP announcements with 2360 RTR prefixes.
+2016-12-06 13:02:15,451 INFO	[default-akka.actor.default-dispatcher-10] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 2360 RTR prefixes in 1.035 seconds
+2016-12-06 13:02:15,451 INFO	[default-akka.actor.default-dispatcher-10] RTRServer Sending Notify with serial 2 to all clients
+2016-12-06 13:02:22,788 INFO	[default-akka.actor.default-dispatcher-8] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/7E3C4EF6166511E2B936276172FD1FF2/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/7E3C4EF6166511E2B936276172FD1FF2
+2016-12-06 13:02:22,788 INFO	[default-akka.actor.default-dispatcher-2] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/78C99096166511E29955056172FD1FF2/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/78C99096166511E29955056172FD1FF2
+2016-12-06 13:02:22,788 INFO	[default-akka.actor.default-dispatcher-6] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/71D3CDC4166511E29148186072FD1FF2/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/71D3CDC4166511E29148186072FD1FF2
+2016-12-06 13:02:22,788 INFO	[default-akka.actor.default-dispatcher-11] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/592C3A9A166511E28225E22D72FD1FF2/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/592C3A9A166511E28225E22D72FD1FF2
+2016-12-06 13:02:22,788 INFO	[default-akka.actor.default-dispatcher-4] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/838DB214166511E2B3BC286172FD1FF2/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/838DB214166511E2B3BC286172FD1FF2
+2016-12-06 13:02:25,699 INFO	[default-akka.actor.default-dispatcher-2] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B41FE6101D6611E2A62F877C72FD1FF2/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B41FE6101D6611E2A62F877C72FD1FF2
+2016-12-06 13:02:25,761 INFO	[default-akka.actor.default-dispatcher-11] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B322A5F41D6611E2A3F27F7C72FD1FF2/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B322A5F41D6611E2A3F27F7C72FD1FF2
+2016-12-06 13:02:25,788 INFO	[default-akka.actor.default-dispatcher-10] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B527EF581D6611E2BB468F7C72FD1FF2/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B527EF581D6611E2BB468F7C72FD1FF2
+2016-12-06 13:02:25,789 INFO	[default-akka.actor.default-dispatcher-6] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B3A24F201D6611E28AC8837C72FD1FF2/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B3A24F201D6611E28AC8837C72FD1FF2
+2016-12-06 13:02:25,838 INFO	[default-akka.actor.default-dispatcher-8] RsyncFetcher Downloading the repository rsync://rpki.apnic.net/repository/B4A1BEA61D6611E2B2CD8B7C72FD1FF2/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki.apnic.net/repository/B4A1BEA61D6611E2B2CD8B7C72FD1FF2
+2016-12-06 13:02:28,714 INFO	[default-akka.actor.default-dispatcher-2] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/jpnic/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/jpnic
+2016-12-06 13:02:28,864 INFO	[default-akka.actor.default-dispatcher-8] CacheStore Updated validationTime for 5 objects.
+2016-12-06 13:02:28,880 INFO	[default-akka.actor.default-dispatcher-8] CacheStore Clear old objects -> deleted 2 objects for which exists a valid alternative.
+2016-12-06 13:02:29,042 INFO	[default-akka.actor.default-dispatcher-8] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 47.125s.
+2016-12-06 13:02:29,088 INFO	[default-akka.actor.default-dispatcher-8] BgpAnnouncementValidator Started validating 694271 BGP announcements with 2360 RTR prefixes.
+2016-12-06 13:02:29,635 INFO	[default-akka.actor.default-dispatcher-8] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 2360 RTR prefixes in 0.54 seconds
+2016-12-06 13:02:29,635 INFO	[default-akka.actor.default-dispatcher-8] RTRServer Sending Notify with serial 3 to all clients
+2016-12-06 13:02:33,169 INFO	[default-akka.actor.default-dispatcher-9] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30003/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30003
+2016-12-06 13:02:33,174 INFO	[default-akka.actor.default-dispatcher-2] CacheStore Updated validationTime for 14 objects.
+2016-12-06 13:02:33,180 INFO	[default-akka.actor.default-dispatcher-6] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/2432/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/2432
+2016-12-06 13:02:33,180 INFO	[default-akka.actor.default-dispatcher-8] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/1639/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/1639
+2016-12-06 13:02:33,180 INFO	[default-akka.actor.default-dispatcher-5] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/2490/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/2490
+2016-12-06 13:02:33,180 INFO	[default-akka.actor.default-dispatcher-13] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/1003/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/1003
+2016-12-06 13:02:33,212 INFO	[default-akka.actor.default-dispatcher-2] CacheStore Clear old objects -> deleted 8 objects for which exists a valid alternative.
+2016-12-06 13:02:33,380 INFO	[default-akka.actor.default-dispatcher-2] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 51.479s.
+2016-12-06 13:02:33,421 INFO	[default-akka.actor.default-dispatcher-2] BgpAnnouncementValidator Started validating 694271 BGP announcements with 2360 RTR prefixes.
+2016-12-06 13:02:34,048 INFO	[default-akka.actor.default-dispatcher-2] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 2360 RTR prefixes in 0.622 seconds
+2016-12-06 13:02:34,048 INFO	[default-akka.actor.default-dispatcher-2] RTRServer Sending Notify with serial 4 to all clients
+2016-12-06 13:02:35,694 INFO	[default-akka.actor.default-dispatcher-2] RsyncFetcher Downloading the repository rsync://ca.rg.net/rpki/RGnet/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/ca.rg.net/rpki/RGnet
+2016-12-06 13:02:35,849 INFO	[default-akka.actor.default-dispatcher-11] CacheStore Updated validationTime for 32 objects.
+2016-12-06 13:02:35,964 INFO	[default-akka.actor.default-dispatcher-11] CacheStore Clear old objects -> deleted 20 objects for which exists a valid alternative.
+2016-12-06 13:02:36,128 INFO	[default-akka.actor.default-dispatcher-11] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 54.202s.
+2016-12-06 13:02:36,168 INFO	[default-akka.actor.default-dispatcher-11] BgpAnnouncementValidator Started validating 694271 BGP announcements with 2360 RTR prefixes.
+2016-12-06 13:02:36,341 INFO	[default-akka.actor.default-dispatcher-6] CacheStore Updated validationTime for 143 objects.
+2016-12-06 13:02:37,245 INFO	[default-akka.actor.default-dispatcher-11] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 2360 RTR prefixes in 1.073 seconds
+2016-12-06 13:02:37,245 INFO	[default-akka.actor.default-dispatcher-11] RTRServer Sending Notify with serial 5 to all clients
+2016-12-06 13:02:37,321 INFO	[default-akka.actor.default-dispatcher-6] CacheStore Clear old objects -> deleted 88 objects for which exists a valid alternative.
+2016-12-06 13:02:37,483 INFO	[default-akka.actor.default-dispatcher-6] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 55.362s.
+2016-12-06 13:02:37,540 INFO	[default-akka.actor.default-dispatcher-6] BgpAnnouncementValidator Started validating 694271 BGP announcements with 2379 RTR prefixes.
+2016-12-06 13:02:37,996 INFO	[default-akka.actor.default-dispatcher-6] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 2379 RTR prefixes in 0.452 seconds
+2016-12-06 13:02:37,997 INFO	[default-akka.actor.default-dispatcher-6] RTRServer Sending Notify with serial 6 to all clients
+2016-12-06 13:02:38,912 INFO	[default-akka.actor.default-dispatcher-38] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30228/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30228
+2016-12-06 13:02:38,913 INFO	[default-akka.actor.default-dispatcher-22] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30045/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30045
+2016-12-06 13:02:39,447 INFO	[default-akka.actor.default-dispatcher-30] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30091/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30091
+2016-12-06 13:02:39,447 INFO	[default-akka.actor.default-dispatcher-9] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/11207/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/11207
+2016-12-06 13:02:39,474 INFO	[default-akka.actor.default-dispatcher-15] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/598/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/598
+2016-12-06 13:02:39,500 INFO	[default-akka.actor.default-dispatcher-33] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30058/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30058
+2016-12-06 13:02:39,522 INFO	[default-akka.actor.default-dispatcher-23] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/699/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/699
+2016-12-06 13:02:39,524 INFO	[default-akka.actor.default-dispatcher-35] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/545/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/545
+2016-12-06 13:02:39,535 INFO	[default-akka.actor.default-dispatcher-14] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/12207/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/12207
+2016-12-06 13:02:39,535 INFO	[default-akka.actor.default-dispatcher-8] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/9/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/9
+2016-12-06 13:02:39,549 INFO	[default-akka.actor.default-dispatcher-26] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/10207/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/10207
+2016-12-06 13:02:39,560 INFO	[default-akka.actor.default-dispatcher-17] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/55/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/55
+2016-12-06 13:02:39,560 INFO	[default-akka.actor.default-dispatcher-3] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/2285/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/2285
+2016-12-06 13:02:39,560 INFO	[default-akka.actor.default-dispatcher-13] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30279/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30279
+2016-12-06 13:02:39,560 INFO	[default-akka.actor.default-dispatcher-28] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/13131/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/13131
+2016-12-06 13:02:39,560 INFO	[default-akka.actor.default-dispatcher-37] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30155/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30155
+2016-12-06 13:02:39,565 INFO	[default-akka.actor.default-dispatcher-19] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30156/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30156
+2016-12-06 13:02:39,565 INFO	[default-akka.actor.default-dispatcher-16] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/30193/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/30193
+2016-12-06 13:02:39,572 INFO	[default-akka.actor.default-dispatcher-21] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/207/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/207
+2016-12-06 13:02:42,276 INFO	[default-akka.actor.default-dispatcher-15] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/1562/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/1562
+2016-12-06 13:02:43,710 INFO	[default-akka.actor.default-dispatcher-35] RsyncFetcher Downloading the repository rsync://rpki-repository.nic.ad.jp/pub/285/ to /home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/data/rsync/rpki-repository.nic.ad.jp/pub/285
+2016-12-06 13:02:47,793 INFO	[default-akka.actor.default-dispatcher-4] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 13:02:51,078 INFO	[default-akka.actor.default-dispatcher-12] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 13:02:54,209 INFO	[default-akka.actor.default-dispatcher-4] CacheStore Clear old objects -> deleted 1410 objects for which exists a valid alternative.
+2016-12-06 13:02:54,371 INFO	[default-akka.actor.default-dispatcher-4] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 72.462s.
+2016-12-06 13:02:54,422 INFO	[default-akka.actor.default-dispatcher-4] BgpAnnouncementValidator Started validating 694271 BGP announcements with 7667 RTR prefixes.
+2016-12-06 13:02:55,337 INFO	[default-akka.actor.default-dispatcher-4] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 7667 RTR prefixes in 0.903 seconds
+2016-12-06 13:02:55,337 INFO	[default-akka.actor.default-dispatcher-4] RTRServer Sending Notify with serial 7 to all clients
+2016-12-06 13:03:26,047 INFO	[default-akka.actor.default-dispatcher-12] CacheStore Clear old objects -> deleted 8228 objects for which exists a valid alternative.
+2016-12-06 13:03:26,218 INFO	[default-akka.actor.default-dispatcher-12] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 106.004s.
+2016-12-06 13:03:26,331 INFO	[default-akka.actor.default-dispatcher-12] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:03:26,804 INFO	[default-akka.actor.default-dispatcher-12] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.43 seconds
+2016-12-06 13:03:26,805 INFO	[default-akka.actor.default-dispatcher-12] RTRServer Sending Notify with serial 8 to all clients
+2016-12-06 13:04:32,439 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51242
+2016-12-06 13:04:32,466 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51244
+2016-12-06 13:04:32,469 INFO	[New I/O server worker #1-1] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51242
+2016-12-06 13:04:33,400 INFO	[New I/O server worker #1-2] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51244
+2016-12-06 13:04:33,452 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51246
+2016-12-06 13:04:33,455 INFO	[New I/O server worker #1-3] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51246
+2016-12-06 13:04:33,455 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51248
+2016-12-06 13:04:34,452 INFO	[New I/O server worker #1-4] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51248
+2016-12-06 13:04:34,506 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51250
+2016-12-06 13:04:34,507 INFO	[New I/O server worker #1-5] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51250
+2016-12-06 13:04:34,508 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51252
+2016-12-06 13:04:35,506 INFO	[New I/O server worker #1-6] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51252
+2016-12-06 13:08:25,065 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51280
+2016-12-06 13:08:25,067 INFO	[New I/O server worker #1-7] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51280
+2016-12-06 13:08:25,067 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51282
+2016-12-06 13:08:26,883 INFO	[New I/O server worker #1-8] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51282
+2016-12-06 13:08:26,937 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51284
+2016-12-06 13:08:26,938 INFO	[New I/O server worker #1-1] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51284
+2016-12-06 13:08:26,938 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51286
+2016-12-06 13:08:28,995 INFO	[New I/O server worker #1-2] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51286
+2016-12-06 13:08:29,025 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51288
+2016-12-06 13:08:29,026 INFO	[New I/O server worker #1-3] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51288
+2016-12-06 13:08:29,026 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51290
+2016-12-06 13:08:31,075 INFO	[New I/O server worker #1-4] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51290
+2016-12-06 13:12:58,322 INFO	[default-akka.actor.default-dispatcher-10] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:12:58,323 INFO	[default-akka.actor.default-dispatcher-10] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 13:12:58,680 INFO	[default-akka.actor.default-dispatcher-10] CacheStore Updated validationTime for 351 objects.
+2016-12-06 13:12:59,472 INFO	[default-akka.actor.default-dispatcher-10] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.149s.
+2016-12-06 13:12:59,629 INFO	[default-akka.actor.default-dispatcher-10] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:13:00,115 INFO	[default-akka.actor.default-dispatcher-10] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.445 seconds
+2016-12-06 13:13:00,116 INFO	[default-akka.actor.default-dispatcher-10] RTRServer Sending Notify with serial 9 to all clients
+2016-12-06 13:13:18,633 INFO	[default-akka.actor.default-dispatcher-63] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:13:18,633 INFO	[default-akka.actor.default-dispatcher-63] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 13:13:20,869 INFO	[default-akka.actor.default-dispatcher-63] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 13:13:25,711 INFO	[default-akka.actor.default-dispatcher-63] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 7.078s.
+2016-12-06 13:13:25,790 INFO	[default-akka.actor.default-dispatcher-63] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:13:26,356 INFO	[default-akka.actor.default-dispatcher-63] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.502 seconds
+2016-12-06 13:13:26,357 INFO	[default-akka.actor.default-dispatcher-63] RTRServer Sending Notify with serial 10 to all clients
+2016-12-06 13:13:38,754 INFO	[default-akka.actor.default-dispatcher-62] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:13:38,754 INFO	[default-akka.actor.default-dispatcher-62] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 13:13:38,774 INFO	[default-akka.actor.default-dispatcher-62] CacheStore Updated validationTime for 5 objects.
+2016-12-06 13:13:38,783 INFO	[default-akka.actor.default-dispatcher-74] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:13:38,783 INFO	[default-akka.actor.default-dispatcher-74] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 13:13:38,968 INFO	[default-akka.actor.default-dispatcher-62] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.214s.
+2016-12-06 13:13:38,989 INFO	[default-akka.actor.default-dispatcher-74] CacheStore Updated validationTime for 14 objects.
+2016-12-06 13:13:39,054 INFO	[default-akka.actor.default-dispatcher-62] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:13:39,317 INFO	[default-akka.actor.default-dispatcher-74] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.533s.
+2016-12-06 13:13:39,497 INFO	[default-akka.actor.default-dispatcher-74] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:13:39,604 INFO	[default-akka.actor.default-dispatcher-62] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.512 seconds
+2016-12-06 13:13:39,605 INFO	[default-akka.actor.default-dispatcher-62] RTRServer Sending Notify with serial 11 to all clients
+2016-12-06 13:13:40,012 INFO	[default-akka.actor.default-dispatcher-74] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.409 seconds
+2016-12-06 13:13:40,013 INFO	[default-akka.actor.default-dispatcher-74] RTRServer Sending Notify with serial 12 to all clients
+2016-12-06 13:13:48,755 INFO	[default-akka.actor.default-dispatcher-43] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:13:48,755 INFO	[default-akka.actor.default-dispatcher-43] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 13:13:48,795 INFO	[default-akka.actor.default-dispatcher-51] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:13:48,795 INFO	[default-akka.actor.default-dispatcher-51] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 13:13:48,819 INFO	[default-akka.actor.default-dispatcher-43] CacheStore Updated validationTime for 32 objects.
+2016-12-06 13:13:49,038 INFO	[default-akka.actor.default-dispatcher-43] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.283s.
+2016-12-06 13:13:49,104 INFO	[default-akka.actor.default-dispatcher-51] CacheStore Updated validationTime for 143 objects.
+2016-12-06 13:13:49,144 INFO	[default-akka.actor.default-dispatcher-43] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:13:49,834 INFO	[default-akka.actor.default-dispatcher-43] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.601 seconds
+2016-12-06 13:13:49,834 INFO	[default-akka.actor.default-dispatcher-43] RTRServer Sending Notify with serial 13 to all clients
+2016-12-06 13:13:49,938 INFO	[default-akka.actor.default-dispatcher-51] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 1.142s.
+2016-12-06 13:13:50,076 INFO	[default-akka.actor.default-dispatcher-51] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:13:50,520 INFO	[default-akka.actor.default-dispatcher-51] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.412 seconds
+2016-12-06 13:13:50,520 INFO	[default-akka.actor.default-dispatcher-51] RTRServer Sending Notify with serial 14 to all clients
+2016-12-06 13:13:58,739 INFO	[default-akka.actor.default-dispatcher-95] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:13:58,739 INFO	[default-akka.actor.default-dispatcher-95] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 13:14:00,701 INFO	[default-akka.actor.default-dispatcher-95] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 13:14:03,794 INFO	[default-akka.actor.default-dispatcher-95] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 5.055s.
+2016-12-06 13:14:03,902 INFO	[default-akka.actor.default-dispatcher-95] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:14:04,374 INFO	[default-akka.actor.default-dispatcher-95] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.436 seconds
+2016-12-06 13:14:04,374 INFO	[default-akka.actor.default-dispatcher-95] RTRServer Sending Notify with serial 15 to all clients
+2016-12-06 13:14:36,749 INFO	[default-akka.actor.default-dispatcher-148] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:14:36,750 INFO	[default-akka.actor.default-dispatcher-148] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 13:14:47,491 INFO	[default-akka.actor.default-dispatcher-148] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 13:15:15,618 INFO	[default-akka.actor.default-dispatcher-148] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 38.868s.
+2016-12-06 13:15:15,706 INFO	[default-akka.actor.default-dispatcher-148] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:15:16,317 INFO	[default-akka.actor.default-dispatcher-148] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.578 seconds
+2016-12-06 13:15:16,317 INFO	[default-akka.actor.default-dispatcher-148] RTRServer Sending Notify with serial 16 to all clients
+2016-12-06 13:17:42,381 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51348
+2016-12-06 13:17:42,383 INFO	[New I/O server worker #1-5] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51348
+2016-12-06 13:17:42,383 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51350
+2016-12-06 13:17:44,207 INFO	[New I/O server worker #1-6] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51350
+2016-12-06 13:17:44,259 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51352
+2016-12-06 13:17:44,260 INFO	[New I/O server worker #1-7] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51352
+2016-12-06 13:17:44,260 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51354
+2016-12-06 13:17:46,318 INFO	[New I/O server worker #1-8] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51354
+2016-12-06 13:17:46,370 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51356
+2016-12-06 13:17:46,371 INFO	[New I/O server worker #1-1] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51356
+2016-12-06 13:17:46,371 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51358
+2016-12-06 13:17:48,413 INFO	[New I/O server worker #1-2] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51358
+2016-12-06 13:22:09,018 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51388
+2016-12-06 13:22:09,020 INFO	[New I/O server worker #1-3] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51388
+2016-12-06 13:22:09,020 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51390
+2016-12-06 13:22:10,844 INFO	[New I/O server worker #1-4] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51390
+2016-12-06 13:22:10,895 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51392
+2016-12-06 13:22:10,897 INFO	[New I/O server worker #1-5] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51392
+2016-12-06 13:22:10,897 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51394
+2016-12-06 13:22:12,949 INFO	[New I/O server worker #1-6] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51394
+2016-12-06 13:22:13,004 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51396
+2016-12-06 13:22:13,005 INFO	[New I/O server worker #1-7] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51396
+2016-12-06 13:22:13,005 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51398
+2016-12-06 13:22:15,064 INFO	[New I/O server worker #1-8] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51398
+2016-12-06 13:23:52,805 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51422
+2016-12-06 13:23:52,808 INFO	[New I/O server worker #1-1] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51422
+2016-12-06 13:23:52,808 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51424
+2016-12-06 13:23:53,810 INFO	[New I/O server worker #1-2] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51424
+2016-12-06 13:23:53,901 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51426
+2016-12-06 13:23:53,902 INFO	[New I/O server worker #1-3] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51426
+2016-12-06 13:23:53,902 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51428
+2016-12-06 13:23:54,906 INFO	[New I/O server worker #1-4] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51428
+2016-12-06 13:23:54,996 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51430
+2016-12-06 13:23:54,997 INFO	[New I/O server worker #1-5] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51430
+2016-12-06 13:23:54,997 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51432
+2016-12-06 13:23:56,000 INFO	[New I/O server worker #1-6] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51432
+2016-12-06 13:24:08,366 INFO	[default-akka.actor.default-dispatcher-162] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:24:08,367 INFO	[default-akka.actor.default-dispatcher-162] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 13:24:08,631 INFO	[default-akka.actor.default-dispatcher-162] CacheStore Updated validationTime for 351 objects.
+2016-12-06 13:24:09,158 INFO	[default-akka.actor.default-dispatcher-162] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 0.791s.
+2016-12-06 13:24:09,280 INFO	[default-akka.actor.default-dispatcher-162] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:24:09,764 INFO	[default-akka.actor.default-dispatcher-162] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.446 seconds
+2016-12-06 13:24:09,765 INFO	[default-akka.actor.default-dispatcher-162] RTRServer Sending Notify with serial 17 to all clients
+2016-12-06 13:24:28,727 INFO	[default-akka.actor.default-dispatcher-202] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:24:28,727 INFO	[default-akka.actor.default-dispatcher-202] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 13:24:30,676 INFO	[default-akka.actor.default-dispatcher-202] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 13:24:34,489 INFO	[default-akka.actor.default-dispatcher-202] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 5.762s.
+2016-12-06 13:24:34,613 INFO	[default-akka.actor.default-dispatcher-202] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:24:35,082 INFO	[default-akka.actor.default-dispatcher-202] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.431 seconds
+2016-12-06 13:24:35,082 INFO	[default-akka.actor.default-dispatcher-202] RTRServer Sending Notify with serial 18 to all clients
+2016-12-06 13:24:46,753 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51446
+2016-12-06 13:24:46,755 INFO	[New I/O server worker #1-7] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51446
+2016-12-06 13:24:46,755 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51448
+2016-12-06 13:24:47,753 INFO	[New I/O server worker #1-8] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51448
+2016-12-06 13:24:48,731 INFO	[default-akka.actor.default-dispatcher-206] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:24:48,731 INFO	[default-akka.actor.default-dispatcher-206] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 13:24:48,762 INFO	[default-akka.actor.default-dispatcher-206] CacheStore Updated validationTime for 14 objects.
+2016-12-06 13:24:48,793 INFO	[default-akka.actor.default-dispatcher-223] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:24:48,794 INFO	[default-akka.actor.default-dispatcher-223] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 13:24:48,807 INFO	[default-akka.actor.default-dispatcher-223] CacheStore Updated validationTime for 5 objects.
+2016-12-06 13:24:48,983 INFO	[default-akka.actor.default-dispatcher-206] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.252s.
+2016-12-06 13:24:49,058 INFO	[default-akka.actor.default-dispatcher-206] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:24:49,149 INFO	[default-akka.actor.default-dispatcher-223] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.355s.
+2016-12-06 13:24:49,889 INFO	[default-akka.actor.default-dispatcher-223] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:24:50,120 INFO	[default-akka.actor.default-dispatcher-206] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.024 seconds
+2016-12-06 13:24:50,120 INFO	[default-akka.actor.default-dispatcher-206] RTRServer Sending Notify with serial 19 to all clients
+2016-12-06 13:24:50,409 INFO	[default-akka.actor.default-dispatcher-223] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.413 seconds
+2016-12-06 13:24:50,409 INFO	[default-akka.actor.default-dispatcher-223] RTRServer Sending Notify with serial 20 to all clients
+2016-12-06 13:24:58,789 INFO	[default-akka.actor.default-dispatcher-232] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:24:58,790 INFO	[default-akka.actor.default-dispatcher-232] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 13:24:58,796 INFO	[default-akka.actor.default-dispatcher-229] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:24:58,797 INFO	[default-akka.actor.default-dispatcher-229] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 13:24:58,847 INFO	[default-akka.actor.default-dispatcher-229] CacheStore Updated validationTime for 32 objects.
+2016-12-06 13:24:59,044 INFO	[default-akka.actor.default-dispatcher-229] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.247s.
+2016-12-06 13:24:59,090 INFO	[default-akka.actor.default-dispatcher-232] CacheStore Updated validationTime for 143 objects.
+2016-12-06 13:24:59,121 INFO	[default-akka.actor.default-dispatcher-229] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:24:59,604 INFO	[default-akka.actor.default-dispatcher-229] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.411 seconds
+2016-12-06 13:24:59,604 INFO	[default-akka.actor.default-dispatcher-229] RTRServer Sending Notify with serial 21 to all clients
+2016-12-06 13:24:59,694 INFO	[default-akka.actor.default-dispatcher-232] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 0.904s.
+2016-12-06 13:24:59,827 INFO	[default-akka.actor.default-dispatcher-232] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:25:00,261 INFO	[default-akka.actor.default-dispatcher-232] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.402 seconds
+2016-12-06 13:25:00,261 INFO	[default-akka.actor.default-dispatcher-232] RTRServer Sending Notify with serial 22 to all clients
+2016-12-06 13:25:08,769 INFO	[default-akka.actor.default-dispatcher-237] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:25:08,769 INFO	[default-akka.actor.default-dispatcher-237] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 13:25:10,608 INFO	[default-akka.actor.default-dispatcher-237] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 13:25:13,158 INFO	[default-akka.actor.default-dispatcher-237] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 4.389s.
+2016-12-06 13:25:13,267 INFO	[default-akka.actor.default-dispatcher-237] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:25:13,724 INFO	[default-akka.actor.default-dispatcher-237] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.422 seconds
+2016-12-06 13:25:13,725 INFO	[default-akka.actor.default-dispatcher-237] RTRServer Sending Notify with serial 23 to all clients
+2016-12-06 13:26:16,720 INFO	[default-akka.actor.default-dispatcher-282] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:26:16,721 INFO	[default-akka.actor.default-dispatcher-282] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 13:26:27,763 INFO	[default-akka.actor.default-dispatcher-282] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 13:26:55,734 INFO	[default-akka.actor.default-dispatcher-282] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 39.013s.
+2016-12-06 13:26:55,830 INFO	[default-akka.actor.default-dispatcher-282] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:26:56,308 INFO	[default-akka.actor.default-dispatcher-282] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.448 seconds
+2016-12-06 13:26:56,308 INFO	[default-akka.actor.default-dispatcher-282] RTRServer Sending Notify with serial 24 to all clients
+2016-12-06 13:35:01,420 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51462
+2016-12-06 13:35:01,422 INFO	[New I/O server worker #1-1] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51462
+2016-12-06 13:35:01,422 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51464
+2016-12-06 13:35:03,482 INFO	[New I/O server worker #1-2] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51464
+2016-12-06 13:35:18,327 INFO	[default-akka.actor.default-dispatcher-297] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:35:18,328 INFO	[default-akka.actor.default-dispatcher-297] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 13:35:18,594 INFO	[default-akka.actor.default-dispatcher-297] CacheStore Updated validationTime for 351 objects.
+2016-12-06 13:35:19,828 INFO	[default-akka.actor.default-dispatcher-297] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.5s.
+2016-12-06 13:35:19,947 INFO	[default-akka.actor.default-dispatcher-297] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:35:20,461 INFO	[default-akka.actor.default-dispatcher-297] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.476 seconds
+2016-12-06 13:35:20,461 INFO	[default-akka.actor.default-dispatcher-297] RTRServer Sending Notify with serial 25 to all clients
+2016-12-06 13:35:38,580 INFO	[default-akka.actor.default-dispatcher-339] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:35:38,581 INFO	[default-akka.actor.default-dispatcher-339] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 13:35:40,714 INFO	[default-akka.actor.default-dispatcher-339] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 13:35:52,089 INFO	[default-akka.actor.default-dispatcher-339] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 13.508s.
+2016-12-06 13:35:52,192 INFO	[default-akka.actor.default-dispatcher-339] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:35:53,359 INFO	[default-akka.actor.default-dispatcher-339] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.131 seconds
+2016-12-06 13:35:53,359 INFO	[default-akka.actor.default-dispatcher-339] RTRServer Sending Notify with serial 26 to all clients
+2016-12-06 13:35:58,820 INFO	[default-akka.actor.default-dispatcher-363] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:35:58,820 INFO	[default-akka.actor.default-dispatcher-363] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 13:35:58,823 INFO	[default-akka.actor.default-dispatcher-364] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:35:58,823 INFO	[default-akka.actor.default-dispatcher-364] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 13:35:58,840 INFO	[default-akka.actor.default-dispatcher-364] CacheStore Updated validationTime for 5 objects.
+2016-12-06 13:35:59,043 INFO	[default-akka.actor.default-dispatcher-364] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.22s.
+2016-12-06 13:35:59,046 INFO	[default-akka.actor.default-dispatcher-363] CacheStore Updated validationTime for 14 objects.
+2016-12-06 13:35:59,139 INFO	[default-akka.actor.default-dispatcher-364] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:35:59,344 INFO	[default-akka.actor.default-dispatcher-363] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.524s.
+2016-12-06 13:35:59,657 INFO	[default-akka.actor.default-dispatcher-364] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.481 seconds
+2016-12-06 13:35:59,657 INFO	[default-akka.actor.default-dispatcher-364] RTRServer Sending Notify with serial 27 to all clients
+2016-12-06 13:35:59,663 INFO	[default-akka.actor.default-dispatcher-363] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:36:00,083 INFO	[default-akka.actor.default-dispatcher-363] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.388 seconds
+2016-12-06 13:36:00,084 INFO	[default-akka.actor.default-dispatcher-363] RTRServer Sending Notify with serial 28 to all clients
+2016-12-06 13:36:02,415 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51496
+2016-12-06 13:36:02,416 INFO	[New I/O server worker #1-3] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51496
+2016-12-06 13:36:02,416 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51498
+2016-12-06 13:36:04,230 INFO	[New I/O server worker #1-4] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51498
+2016-12-06 13:36:04,278 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51500
+2016-12-06 13:36:04,279 INFO	[New I/O server worker #1-5] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51500
+2016-12-06 13:36:04,279 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51502
+2016-12-06 13:36:06,331 INFO	[New I/O server worker #1-6] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51502
+2016-12-06 13:36:06,374 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51508
+2016-12-06 13:36:06,375 INFO	[New I/O server worker #1-7] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51508
+2016-12-06 13:36:06,375 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:51510
+2016-12-06 13:36:08,418 INFO	[New I/O server worker #1-8] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:51510
+2016-12-06 13:36:08,692 INFO	[default-akka.actor.default-dispatcher-334] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:36:08,692 INFO	[default-akka.actor.default-dispatcher-334] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 13:36:08,736 INFO	[default-akka.actor.default-dispatcher-334] CacheStore Updated validationTime for 32 objects.
+2016-12-06 13:36:08,766 INFO	[default-akka.actor.default-dispatcher-331] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:36:08,767 INFO	[default-akka.actor.default-dispatcher-331] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 13:36:08,946 INFO	[default-akka.actor.default-dispatcher-334] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.254s.
+2016-12-06 13:36:09,026 INFO	[default-akka.actor.default-dispatcher-334] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:36:09,031 INFO	[default-akka.actor.default-dispatcher-331] CacheStore Updated validationTime for 143 objects.
+2016-12-06 13:36:09,532 INFO	[default-akka.actor.default-dispatcher-334] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.435 seconds
+2016-12-06 13:36:09,532 INFO	[default-akka.actor.default-dispatcher-334] RTRServer Sending Notify with serial 29 to all clients
+2016-12-06 13:36:09,644 INFO	[default-akka.actor.default-dispatcher-331] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 0.877s.
+2016-12-06 13:36:09,753 INFO	[default-akka.actor.default-dispatcher-331] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:36:10,223 INFO	[default-akka.actor.default-dispatcher-331] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.406 seconds
+2016-12-06 13:36:10,223 INFO	[default-akka.actor.default-dispatcher-331] RTRServer Sending Notify with serial 30 to all clients
+2016-12-06 13:36:18,734 INFO	[default-akka.actor.default-dispatcher-364] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:36:18,734 INFO	[default-akka.actor.default-dispatcher-364] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 13:36:20,658 INFO	[default-akka.actor.default-dispatcher-364] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 13:36:23,235 INFO	[default-akka.actor.default-dispatcher-364] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 4.5s.
+2016-12-06 13:36:23,356 INFO	[default-akka.actor.default-dispatcher-364] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:36:23,839 INFO	[default-akka.actor.default-dispatcher-364] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.444 seconds
+2016-12-06 13:36:23,840 INFO	[default-akka.actor.default-dispatcher-364] RTRServer Sending Notify with serial 31 to all clients
+2016-12-06 13:37:56,725 INFO	[default-akka.actor.default-dispatcher-407] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:37:56,726 INFO	[default-akka.actor.default-dispatcher-407] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 13:38:07,775 INFO	[default-akka.actor.default-dispatcher-407] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 13:38:35,662 INFO	[default-akka.actor.default-dispatcher-407] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 38.935s.
+2016-12-06 13:38:35,750 INFO	[default-akka.actor.default-dispatcher-407] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:38:36,202 INFO	[default-akka.actor.default-dispatcher-407] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.42 seconds
+2016-12-06 13:38:36,202 INFO	[default-akka.actor.default-dispatcher-407] RTRServer Sending Notify with serial 32 to all clients
+2016-12-06 13:46:28,391 INFO	[default-akka.actor.default-dispatcher-428] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:46:28,391 INFO	[default-akka.actor.default-dispatcher-428] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 13:46:28,660 INFO	[default-akka.actor.default-dispatcher-428] CacheStore Updated validationTime for 351 objects.
+2016-12-06 13:46:29,727 INFO	[default-akka.actor.default-dispatcher-428] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.336s.
+2016-12-06 13:46:29,843 INFO	[default-akka.actor.default-dispatcher-428] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:46:30,367 INFO	[default-akka.actor.default-dispatcher-428] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.484 seconds
+2016-12-06 13:46:30,367 INFO	[default-akka.actor.default-dispatcher-428] RTRServer Sending Notify with serial 33 to all clients
+2016-12-06 13:46:58,718 INFO	[default-akka.actor.default-dispatcher-453] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:46:58,719 INFO	[default-akka.actor.default-dispatcher-453] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 13:47:00,844 INFO	[default-akka.actor.default-dispatcher-453] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 13:47:08,741 INFO	[default-akka.actor.default-dispatcher-443] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:47:08,741 INFO	[default-akka.actor.default-dispatcher-443] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 13:47:08,758 INFO	[default-akka.actor.default-dispatcher-444] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:47:08,758 INFO	[default-akka.actor.default-dispatcher-444] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 13:47:09,331 INFO	[default-akka.actor.default-dispatcher-444] CacheStore Updated validationTime for 5 objects.
+2016-12-06 13:47:09,336 INFO	[default-akka.actor.default-dispatcher-443] CacheStore Updated validationTime for 14 objects.
+2016-12-06 13:47:09,525 INFO	[default-akka.actor.default-dispatcher-444] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.767s.
+2016-12-06 13:47:09,698 INFO	[default-akka.actor.default-dispatcher-444] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:47:09,746 INFO	[default-akka.actor.default-dispatcher-443] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 1.005s.
+2016-12-06 13:47:10,005 INFO	[default-akka.actor.default-dispatcher-443] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:47:10,536 INFO	[default-akka.actor.default-dispatcher-444] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.767 seconds
+2016-12-06 13:47:10,544 INFO	[default-akka.actor.default-dispatcher-444] RTRServer Sending Notify with serial 34 to all clients
+2016-12-06 13:47:10,699 INFO	[default-akka.actor.default-dispatcher-453] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 11.98s.
+2016-12-06 13:47:10,880 INFO	[default-akka.actor.default-dispatcher-443] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.617 seconds
+2016-12-06 13:47:10,880 INFO	[default-akka.actor.default-dispatcher-443] RTRServer Sending Notify with serial 35 to all clients
+2016-12-06 13:47:10,902 INFO	[default-akka.actor.default-dispatcher-453] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:47:11,417 INFO	[default-akka.actor.default-dispatcher-453] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.443 seconds
+2016-12-06 13:47:11,417 INFO	[default-akka.actor.default-dispatcher-453] RTRServer Sending Notify with serial 36 to all clients
+2016-12-06 13:47:18,786 INFO	[default-akka.actor.default-dispatcher-460] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:47:18,787 INFO	[default-akka.actor.default-dispatcher-460] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 13:47:18,789 INFO	[default-akka.actor.default-dispatcher-466] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:47:18,790 INFO	[default-akka.actor.default-dispatcher-466] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 13:47:18,843 INFO	[default-akka.actor.default-dispatcher-460] CacheStore Updated validationTime for 32 objects.
+2016-12-06 13:47:19,070 INFO	[default-akka.actor.default-dispatcher-460] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.283s.
+2016-12-06 13:47:19,112 INFO	[default-akka.actor.default-dispatcher-466] CacheStore Updated validationTime for 143 objects.
+2016-12-06 13:47:19,154 INFO	[default-akka.actor.default-dispatcher-460] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:47:19,701 INFO	[default-akka.actor.default-dispatcher-460] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.508 seconds
+2016-12-06 13:47:19,701 INFO	[default-akka.actor.default-dispatcher-460] RTRServer Sending Notify with serial 37 to all clients
+2016-12-06 13:47:19,723 INFO	[default-akka.actor.default-dispatcher-466] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 0.933s.
+2016-12-06 13:47:19,828 INFO	[default-akka.actor.default-dispatcher-466] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:47:20,327 INFO	[default-akka.actor.default-dispatcher-466] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.462 seconds
+2016-12-06 13:47:20,327 INFO	[default-akka.actor.default-dispatcher-466] RTRServer Sending Notify with serial 38 to all clients
+2016-12-06 13:47:28,730 INFO	[default-akka.actor.default-dispatcher-494] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:47:28,731 INFO	[default-akka.actor.default-dispatcher-494] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 13:47:30,570 INFO	[default-akka.actor.default-dispatcher-494] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 13:47:33,309 INFO	[default-akka.actor.default-dispatcher-494] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 4.578s.
+2016-12-06 13:47:33,395 INFO	[default-akka.actor.default-dispatcher-494] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:47:33,938 INFO	[default-akka.actor.default-dispatcher-494] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.471 seconds
+2016-12-06 13:47:33,938 INFO	[default-akka.actor.default-dispatcher-494] RTRServer Sending Notify with serial 39 to all clients
+2016-12-06 13:49:36,723 INFO	[default-akka.actor.default-dispatcher-547] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:49:36,724 INFO	[default-akka.actor.default-dispatcher-547] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 13:49:47,342 INFO	[default-akka.actor.default-dispatcher-547] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 13:50:13,826 INFO	[default-akka.actor.default-dispatcher-547] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 37.102s.
+2016-12-06 13:50:13,949 INFO	[default-akka.actor.default-dispatcher-547] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:50:14,475 INFO	[default-akka.actor.default-dispatcher-547] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.484 seconds
+2016-12-06 13:50:14,476 INFO	[default-akka.actor.default-dispatcher-547] RTRServer Sending Notify with serial 40 to all clients
+2016-12-06 13:56:57,136 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:52334
+2016-12-06 13:56:57,137 INFO	[New I/O server boss #1 ([id: 0x5b11a194, /0:0:0:0:0:0:0:0:8282])] RTRServerHandler Client connected : /0:0:0:0:0:0:0:1:52336
+2016-12-06 13:57:02,392 INFO	[New I/O server worker #1-1] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:52334
+2016-12-06 13:57:07,818 INFO	[New I/O server worker #1-2] RTRServerHandler Client disconnected : /0:0:0:0:0:0:0:1:52336
+2016-12-06 13:57:38,321 INFO	[default-akka.actor.default-dispatcher-561] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:57:38,322 INFO	[default-akka.actor.default-dispatcher-561] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 13:57:38,609 INFO	[default-akka.actor.default-dispatcher-561] CacheStore Updated validationTime for 351 objects.
+2016-12-06 13:57:39,715 INFO	[default-akka.actor.default-dispatcher-561] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.393s.
+2016-12-06 13:57:39,817 INFO	[default-akka.actor.default-dispatcher-561] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:57:40,338 INFO	[default-akka.actor.default-dispatcher-561] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.484 seconds
+2016-12-06 13:57:40,338 INFO	[default-akka.actor.default-dispatcher-561] RTRServer Sending Notify with serial 41 to all clients
+2016-12-06 13:58:18,763 INFO	[default-akka.actor.default-dispatcher-590] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:58:18,763 INFO	[default-akka.actor.default-dispatcher-590] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 13:58:18,779 INFO	[default-akka.actor.default-dispatcher-584] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:58:18,780 INFO	[default-akka.actor.default-dispatcher-584] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 13:58:18,816 INFO	[default-akka.actor.default-dispatcher-590] CacheStore Updated validationTime for 5 objects.
+2016-12-06 13:58:18,832 INFO	[default-akka.actor.default-dispatcher-584] CacheStore Updated validationTime for 14 objects.
+2016-12-06 13:58:19,020 INFO	[default-akka.actor.default-dispatcher-590] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.257s.
+2016-12-06 13:58:19,103 INFO	[default-akka.actor.default-dispatcher-590] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:58:19,186 INFO	[default-akka.actor.default-dispatcher-584] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.406s.
+2016-12-06 13:58:19,199 INFO	[default-akka.actor.default-dispatcher-594] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:58:19,199 INFO	[default-akka.actor.default-dispatcher-594] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 13:58:19,564 INFO	[default-akka.actor.default-dispatcher-584] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:58:20,461 INFO	[default-akka.actor.default-dispatcher-590] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.317 seconds
+2016-12-06 13:58:20,461 INFO	[default-akka.actor.default-dispatcher-590] RTRServer Sending Notify with serial 42 to all clients
+2016-12-06 13:58:20,929 INFO	[default-akka.actor.default-dispatcher-584] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.63 seconds
+2016-12-06 13:58:20,929 INFO	[default-akka.actor.default-dispatcher-584] RTRServer Sending Notify with serial 43 to all clients
+2016-12-06 13:58:22,738 INFO	[default-akka.actor.default-dispatcher-594] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 13:58:25,933 INFO	[default-akka.actor.default-dispatcher-594] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 6.733s.
+2016-12-06 13:58:26,068 INFO	[default-akka.actor.default-dispatcher-594] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:58:26,571 INFO	[default-akka.actor.default-dispatcher-594] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.461 seconds
+2016-12-06 13:58:26,571 INFO	[default-akka.actor.default-dispatcher-594] RTRServer Sending Notify with serial 44 to all clients
+2016-12-06 13:58:28,755 INFO	[default-akka.actor.default-dispatcher-617] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:58:28,756 INFO	[default-akka.actor.default-dispatcher-617] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 13:58:28,759 INFO	[default-akka.actor.default-dispatcher-584] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:58:28,759 INFO	[default-akka.actor.default-dispatcher-584] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 13:58:28,812 INFO	[default-akka.actor.default-dispatcher-617] CacheStore Updated validationTime for 32 objects.
+2016-12-06 13:58:29,048 INFO	[default-akka.actor.default-dispatcher-617] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.292s.
+2016-12-06 13:58:29,080 INFO	[default-akka.actor.default-dispatcher-584] CacheStore Updated validationTime for 143 objects.
+2016-12-06 13:58:29,131 INFO	[default-akka.actor.default-dispatcher-617] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:58:29,698 INFO	[default-akka.actor.default-dispatcher-617] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.527 seconds
+2016-12-06 13:58:29,698 INFO	[default-akka.actor.default-dispatcher-617] RTRServer Sending Notify with serial 45 to all clients
+2016-12-06 13:58:29,734 INFO	[default-akka.actor.default-dispatcher-584] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 0.975s.
+2016-12-06 13:58:29,839 INFO	[default-akka.actor.default-dispatcher-584] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:58:30,336 INFO	[default-akka.actor.default-dispatcher-584] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.459 seconds
+2016-12-06 13:58:30,336 INFO	[default-akka.actor.default-dispatcher-584] RTRServer Sending Notify with serial 46 to all clients
+2016-12-06 13:58:38,791 INFO	[default-akka.actor.default-dispatcher-623] CacheStore Updated validationTime for 1 objects.
+2016-12-06 13:58:38,792 INFO	[default-akka.actor.default-dispatcher-623] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 13:58:40,612 INFO	[default-akka.actor.default-dispatcher-623] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 13:58:43,887 INFO	[default-akka.actor.default-dispatcher-623] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 5.095s.
+2016-12-06 13:58:44,004 INFO	[default-akka.actor.default-dispatcher-623] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 13:58:44,546 INFO	[default-akka.actor.default-dispatcher-623] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.502 seconds
+2016-12-06 13:58:44,546 INFO	[default-akka.actor.default-dispatcher-623] RTRServer Sending Notify with serial 47 to all clients
+2016-12-06 14:01:16,728 INFO	[default-akka.actor.default-dispatcher-657] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:01:16,729 INFO	[default-akka.actor.default-dispatcher-657] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 14:01:27,438 INFO	[default-akka.actor.default-dispatcher-657] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 14:01:54,008 INFO	[default-akka.actor.default-dispatcher-657] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 37.279s.
+2016-12-06 14:01:54,108 INFO	[default-akka.actor.default-dispatcher-657] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:01:54,626 INFO	[default-akka.actor.default-dispatcher-657] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.452 seconds
+2016-12-06 14:01:54,626 INFO	[default-akka.actor.default-dispatcher-657] RTRServer Sending Notify with serial 48 to all clients
+2016-12-06 14:08:48,375 INFO	[default-akka.actor.default-dispatcher-656] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:08:48,376 INFO	[default-akka.actor.default-dispatcher-656] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 14:08:48,666 INFO	[default-akka.actor.default-dispatcher-656] CacheStore Updated validationTime for 351 objects.
+2016-12-06 14:08:49,749 INFO	[default-akka.actor.default-dispatcher-656] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.373s.
+2016-12-06 14:08:49,860 INFO	[default-akka.actor.default-dispatcher-656] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:08:50,381 INFO	[default-akka.actor.default-dispatcher-656] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.483 seconds
+2016-12-06 14:08:50,381 INFO	[default-akka.actor.default-dispatcher-656] RTRServer Sending Notify with serial 49 to all clients
+2016-12-06 14:09:28,768 INFO	[default-akka.actor.default-dispatcher-724] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:09:28,768 INFO	[default-akka.actor.default-dispatcher-724] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 14:09:28,774 INFO	[default-akka.actor.default-dispatcher-710] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:09:28,774 INFO	[default-akka.actor.default-dispatcher-710] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 14:09:28,799 INFO	[default-akka.actor.default-dispatcher-710] CacheStore Updated validationTime for 5 objects.
+2016-12-06 14:09:28,813 INFO	[default-akka.actor.default-dispatcher-724] CacheStore Updated validationTime for 14 objects.
+2016-12-06 14:09:28,998 INFO	[default-akka.actor.default-dispatcher-710] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.224s.
+2016-12-06 14:09:29,081 INFO	[default-akka.actor.default-dispatcher-710] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:09:29,228 INFO	[default-akka.actor.default-dispatcher-724] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.46s.
+2016-12-06 14:09:29,267 INFO	[default-akka.actor.default-dispatcher-675] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:09:29,267 INFO	[default-akka.actor.default-dispatcher-675] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 14:09:29,492 INFO	[default-akka.actor.default-dispatcher-724] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:09:30,467 INFO	[default-akka.actor.default-dispatcher-710] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.345 seconds
+2016-12-06 14:09:30,467 INFO	[default-akka.actor.default-dispatcher-710] RTRServer Sending Notify with serial 50 to all clients
+2016-12-06 14:09:30,909 INFO	[default-akka.actor.default-dispatcher-724] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.286 seconds
+2016-12-06 14:09:30,909 INFO	[default-akka.actor.default-dispatcher-724] RTRServer Sending Notify with serial 51 to all clients
+2016-12-06 14:09:32,703 INFO	[default-akka.actor.default-dispatcher-675] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 14:09:35,902 INFO	[default-akka.actor.default-dispatcher-675] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 6.635s.
+2016-12-06 14:09:36,028 INFO	[default-akka.actor.default-dispatcher-675] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:09:36,534 INFO	[default-akka.actor.default-dispatcher-675] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.462 seconds
+2016-12-06 14:09:36,534 INFO	[default-akka.actor.default-dispatcher-675] RTRServer Sending Notify with serial 52 to all clients
+2016-12-06 14:09:39,159 INFO	[default-akka.actor.default-dispatcher-720] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:09:39,159 INFO	[default-akka.actor.default-dispatcher-720] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 14:09:39,196 INFO	[default-akka.actor.default-dispatcher-740] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:09:39,196 INFO	[default-akka.actor.default-dispatcher-740] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 14:09:39,238 INFO	[default-akka.actor.default-dispatcher-720] CacheStore Updated validationTime for 32 objects.
+2016-12-06 14:09:39,449 INFO	[default-akka.actor.default-dispatcher-720] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.29s.
+2016-12-06 14:09:39,486 INFO	[default-akka.actor.default-dispatcher-740] CacheStore Updated validationTime for 143 objects.
+2016-12-06 14:09:39,533 INFO	[default-akka.actor.default-dispatcher-720] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:09:40,093 INFO	[default-akka.actor.default-dispatcher-720] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.521 seconds
+2016-12-06 14:09:40,093 INFO	[default-akka.actor.default-dispatcher-720] RTRServer Sending Notify with serial 53 to all clients
+2016-12-06 14:09:40,134 INFO	[default-akka.actor.default-dispatcher-740] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 0.938s.
+2016-12-06 14:09:40,239 INFO	[default-akka.actor.default-dispatcher-740] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:09:40,743 INFO	[default-akka.actor.default-dispatcher-740] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.467 seconds
+2016-12-06 14:09:40,743 INFO	[default-akka.actor.default-dispatcher-740] RTRServer Sending Notify with serial 54 to all clients
+2016-12-06 14:09:48,793 INFO	[default-akka.actor.default-dispatcher-743] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:09:48,793 INFO	[default-akka.actor.default-dispatcher-743] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 14:09:50,667 INFO	[default-akka.actor.default-dispatcher-743] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 14:09:53,886 INFO	[default-akka.actor.default-dispatcher-743] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 5.093s.
+2016-12-06 14:09:54,019 INFO	[default-akka.actor.default-dispatcher-743] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:09:54,564 INFO	[default-akka.actor.default-dispatcher-743] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.504 seconds
+2016-12-06 14:09:54,564 INFO	[default-akka.actor.default-dispatcher-743] RTRServer Sending Notify with serial 55 to all clients
+2016-12-06 14:12:56,725 INFO	[default-akka.actor.default-dispatcher-780] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:12:56,726 INFO	[default-akka.actor.default-dispatcher-780] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 14:13:07,698 INFO	[default-akka.actor.default-dispatcher-780] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 14:13:33,889 INFO	[default-akka.actor.default-dispatcher-780] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 37.163s.
+2016-12-06 14:13:33,988 INFO	[default-akka.actor.default-dispatcher-780] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:13:34,508 INFO	[default-akka.actor.default-dispatcher-780] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.482 seconds
+2016-12-06 14:13:34,508 INFO	[default-akka.actor.default-dispatcher-780] RTRServer Sending Notify with serial 56 to all clients
+2016-12-06 14:19:58,318 INFO	[default-akka.actor.default-dispatcher-774] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:19:58,318 INFO	[default-akka.actor.default-dispatcher-774] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 14:19:58,601 INFO	[default-akka.actor.default-dispatcher-774] CacheStore Updated validationTime for 351 objects.
+2016-12-06 14:19:59,680 INFO	[default-akka.actor.default-dispatcher-774] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.362s.
+2016-12-06 14:19:59,794 INFO	[default-akka.actor.default-dispatcher-774] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:20:00,296 INFO	[default-akka.actor.default-dispatcher-774] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.462 seconds
+2016-12-06 14:20:00,296 INFO	[default-akka.actor.default-dispatcher-774] RTRServer Sending Notify with serial 57 to all clients
+2016-12-06 14:20:38,790 INFO	[default-akka.actor.default-dispatcher-838] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:20:38,791 INFO	[default-akka.actor.default-dispatcher-838] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 14:20:38,796 INFO	[default-akka.actor.default-dispatcher-804] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:20:38,797 INFO	[default-akka.actor.default-dispatcher-804] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 14:20:38,803 INFO	[default-akka.actor.default-dispatcher-830] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:20:38,803 INFO	[default-akka.actor.default-dispatcher-830] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 14:20:38,833 INFO	[default-akka.actor.default-dispatcher-830] CacheStore Updated validationTime for 5 objects.
+2016-12-06 14:20:38,858 INFO	[default-akka.actor.default-dispatcher-804] CacheStore Updated validationTime for 14 objects.
+2016-12-06 14:20:39,032 INFO	[default-akka.actor.default-dispatcher-830] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.229s.
+2016-12-06 14:20:39,117 INFO	[default-akka.actor.default-dispatcher-830] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:20:39,236 INFO	[default-akka.actor.default-dispatcher-804] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.439s.
+2016-12-06 14:20:39,419 INFO	[default-akka.actor.default-dispatcher-804] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:20:40,582 INFO	[default-akka.actor.default-dispatcher-830] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.424 seconds
+2016-12-06 14:20:40,582 INFO	[default-akka.actor.default-dispatcher-830] RTRServer Sending Notify with serial 58 to all clients
+2016-12-06 14:20:40,962 INFO	[default-akka.actor.default-dispatcher-804] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.498 seconds
+2016-12-06 14:20:40,962 INFO	[default-akka.actor.default-dispatcher-804] RTRServer Sending Notify with serial 59 to all clients
+2016-12-06 14:20:42,459 INFO	[default-akka.actor.default-dispatcher-838] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 14:20:45,733 INFO	[default-akka.actor.default-dispatcher-838] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 6.942s.
+2016-12-06 14:20:45,857 INFO	[default-akka.actor.default-dispatcher-838] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:20:46,411 INFO	[default-akka.actor.default-dispatcher-838] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.515 seconds
+2016-12-06 14:20:46,411 INFO	[default-akka.actor.default-dispatcher-838] RTRServer Sending Notify with serial 60 to all clients
+2016-12-06 14:20:48,859 INFO	[default-akka.actor.default-dispatcher-853] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:20:48,860 INFO	[default-akka.actor.default-dispatcher-853] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 14:20:48,880 INFO	[default-akka.actor.default-dispatcher-831] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:20:48,880 INFO	[default-akka.actor.default-dispatcher-831] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 14:20:48,920 INFO	[default-akka.actor.default-dispatcher-831] CacheStore Updated validationTime for 32 objects.
+2016-12-06 14:20:49,149 INFO	[default-akka.actor.default-dispatcher-831] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.269s.
+2016-12-06 14:20:49,179 INFO	[default-akka.actor.default-dispatcher-853] CacheStore Updated validationTime for 143 objects.
+2016-12-06 14:20:49,235 INFO	[default-akka.actor.default-dispatcher-831] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:20:49,778 INFO	[default-akka.actor.default-dispatcher-831] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.503 seconds
+2016-12-06 14:20:49,779 INFO	[default-akka.actor.default-dispatcher-831] RTRServer Sending Notify with serial 61 to all clients
+2016-12-06 14:20:49,899 INFO	[default-akka.actor.default-dispatcher-853] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 1.039s.
+2016-12-06 14:20:50,014 INFO	[default-akka.actor.default-dispatcher-853] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:20:50,523 INFO	[default-akka.actor.default-dispatcher-853] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.47 seconds
+2016-12-06 14:20:50,523 INFO	[default-akka.actor.default-dispatcher-853] RTRServer Sending Notify with serial 62 to all clients
+2016-12-06 14:20:58,789 INFO	[default-akka.actor.default-dispatcher-844] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:20:58,789 INFO	[default-akka.actor.default-dispatcher-844] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 14:21:00,697 INFO	[default-akka.actor.default-dispatcher-844] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 14:21:03,950 INFO	[default-akka.actor.default-dispatcher-844] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 5.161s.
+2016-12-06 14:21:04,085 INFO	[default-akka.actor.default-dispatcher-844] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:21:04,607 INFO	[default-akka.actor.default-dispatcher-844] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.481 seconds
+2016-12-06 14:21:04,607 INFO	[default-akka.actor.default-dispatcher-844] RTRServer Sending Notify with serial 63 to all clients
+2016-12-06 14:24:36,728 INFO	[default-akka.actor.default-dispatcher-909] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:24:36,729 INFO	[default-akka.actor.default-dispatcher-909] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 14:24:47,561 INFO	[default-akka.actor.default-dispatcher-909] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 14:25:13,208 INFO	[default-akka.actor.default-dispatcher-909] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 36.479s.
+2016-12-06 14:25:13,340 INFO	[default-akka.actor.default-dispatcher-909] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:25:13,866 INFO	[default-akka.actor.default-dispatcher-909] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.458 seconds
+2016-12-06 14:25:13,866 INFO	[default-akka.actor.default-dispatcher-909] RTRServer Sending Notify with serial 64 to all clients
+2016-12-06 14:31:08,527 INFO	[default-akka.actor.default-dispatcher-921] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:31:08,527 INFO	[default-akka.actor.default-dispatcher-921] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 14:31:08,817 INFO	[default-akka.actor.default-dispatcher-921] CacheStore Updated validationTime for 351 objects.
+2016-12-06 14:31:09,883 INFO	[default-akka.actor.default-dispatcher-921] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.356s.
+2016-12-06 14:31:09,997 INFO	[default-akka.actor.default-dispatcher-921] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:31:10,498 INFO	[default-akka.actor.default-dispatcher-921] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.461 seconds
+2016-12-06 14:31:10,498 INFO	[default-akka.actor.default-dispatcher-921] RTRServer Sending Notify with serial 65 to all clients
+2016-12-06 14:31:48,766 INFO	[default-akka.actor.default-dispatcher-962] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:31:48,766 INFO	[default-akka.actor.default-dispatcher-962] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 14:31:48,778 INFO	[default-akka.actor.default-dispatcher-963] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:31:48,778 INFO	[default-akka.actor.default-dispatcher-963] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 14:31:48,796 INFO	[default-akka.actor.default-dispatcher-962] CacheStore Updated validationTime for 5 objects.
+2016-12-06 14:31:48,808 INFO	[default-akka.actor.default-dispatcher-949] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:31:48,808 INFO	[default-akka.actor.default-dispatcher-949] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 14:31:48,997 INFO	[default-akka.actor.default-dispatcher-962] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.231s.
+2016-12-06 14:31:49,007 INFO	[default-akka.actor.default-dispatcher-963] CacheStore Updated validationTime for 14 objects.
+2016-12-06 14:31:49,087 INFO	[default-akka.actor.default-dispatcher-962] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:31:49,343 INFO	[default-akka.actor.default-dispatcher-963] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.565s.
+2016-12-06 14:31:50,314 INFO	[default-akka.actor.default-dispatcher-963] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:31:50,594 INFO	[default-akka.actor.default-dispatcher-962] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.464 seconds
+2016-12-06 14:31:50,594 INFO	[default-akka.actor.default-dispatcher-962] RTRServer Sending Notify with serial 66 to all clients
+2016-12-06 14:31:51,252 INFO	[default-akka.actor.default-dispatcher-963] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.89 seconds
+2016-12-06 14:31:51,252 INFO	[default-akka.actor.default-dispatcher-963] RTRServer Sending Notify with serial 67 to all clients
+2016-12-06 14:31:52,322 INFO	[default-akka.actor.default-dispatcher-949] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 14:31:55,454 INFO	[default-akka.actor.default-dispatcher-949] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 6.646s.
+2016-12-06 14:31:55,588 INFO	[default-akka.actor.default-dispatcher-949] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:31:56,095 INFO	[default-akka.actor.default-dispatcher-949] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.466 seconds
+2016-12-06 14:31:56,095 INFO	[default-akka.actor.default-dispatcher-949] RTRServer Sending Notify with serial 68 to all clients
+2016-12-06 14:31:58,776 INFO	[default-akka.actor.default-dispatcher-985] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:31:58,776 INFO	[default-akka.actor.default-dispatcher-985] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 14:31:58,780 INFO	[default-akka.actor.default-dispatcher-990] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:31:58,780 INFO	[default-akka.actor.default-dispatcher-990] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 14:31:58,832 INFO	[default-akka.actor.default-dispatcher-985] CacheStore Updated validationTime for 32 objects.
+2016-12-06 14:31:59,054 INFO	[default-akka.actor.default-dispatcher-985] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.278s.
+2016-12-06 14:31:59,092 INFO	[default-akka.actor.default-dispatcher-990] CacheStore Updated validationTime for 143 objects.
+2016-12-06 14:31:59,138 INFO	[default-akka.actor.default-dispatcher-985] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:31:59,693 INFO	[default-akka.actor.default-dispatcher-985] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.515 seconds
+2016-12-06 14:31:59,693 INFO	[default-akka.actor.default-dispatcher-985] RTRServer Sending Notify with serial 69 to all clients
+2016-12-06 14:31:59,781 INFO	[default-akka.actor.default-dispatcher-990] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 1.001s.
+2016-12-06 14:31:59,893 INFO	[default-akka.actor.default-dispatcher-990] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:32:00,408 INFO	[default-akka.actor.default-dispatcher-990] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.477 seconds
+2016-12-06 14:32:00,409 INFO	[default-akka.actor.default-dispatcher-990] RTRServer Sending Notify with serial 70 to all clients
+2016-12-06 14:32:08,779 INFO	[default-akka.actor.default-dispatcher-989] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:32:08,779 INFO	[default-akka.actor.default-dispatcher-989] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 14:32:10,642 INFO	[default-akka.actor.default-dispatcher-989] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 14:32:13,850 INFO	[default-akka.actor.default-dispatcher-989] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 5.071s.
+2016-12-06 14:32:13,932 INFO	[default-akka.actor.default-dispatcher-989] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:32:14,466 INFO	[default-akka.actor.default-dispatcher-989] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.499 seconds
+2016-12-06 14:32:14,466 INFO	[default-akka.actor.default-dispatcher-989] RTRServer Sending Notify with serial 71 to all clients
+2016-12-06 14:36:16,715 INFO	[default-akka.actor.default-dispatcher-1041] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:36:16,715 INFO	[default-akka.actor.default-dispatcher-1041] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 14:36:27,566 INFO	[default-akka.actor.default-dispatcher-1041] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 14:36:53,372 INFO	[default-akka.actor.default-dispatcher-1041] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 36.657s.
+2016-12-06 14:36:53,520 INFO	[default-akka.actor.default-dispatcher-1041] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:36:54,072 INFO	[default-akka.actor.default-dispatcher-1041] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.509 seconds
+2016-12-06 14:36:54,073 INFO	[default-akka.actor.default-dispatcher-1041] RTRServer Sending Notify with serial 72 to all clients
+2016-12-06 14:42:18,319 INFO	[default-akka.actor.default-dispatcher-1058] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:42:18,319 INFO	[default-akka.actor.default-dispatcher-1058] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 14:42:18,587 INFO	[default-akka.actor.default-dispatcher-1058] CacheStore Updated validationTime for 351 objects.
+2016-12-06 14:42:19,689 INFO	[default-akka.actor.default-dispatcher-1058] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.37s.
+2016-12-06 14:42:19,822 INFO	[default-akka.actor.default-dispatcher-1058] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:42:20,364 INFO	[default-akka.actor.default-dispatcher-1058] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.501 seconds
+2016-12-06 14:42:20,364 INFO	[default-akka.actor.default-dispatcher-1058] RTRServer Sending Notify with serial 73 to all clients
+2016-12-06 14:42:58,754 INFO	[default-akka.actor.default-dispatcher-1084] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:42:58,754 INFO	[default-akka.actor.default-dispatcher-1084] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 14:42:58,774 INFO	[default-akka.actor.default-dispatcher-1077] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:42:58,774 INFO	[default-akka.actor.default-dispatcher-1077] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 14:42:58,788 INFO	[default-akka.actor.default-dispatcher-1077] CacheStore Updated validationTime for 5 objects.
+2016-12-06 14:42:58,806 INFO	[default-akka.actor.default-dispatcher-1084] CacheStore Updated validationTime for 14 objects.
+2016-12-06 14:42:58,821 INFO	[default-akka.actor.default-dispatcher-1071] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:42:58,821 INFO	[default-akka.actor.default-dispatcher-1071] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 14:42:59,001 INFO	[default-akka.actor.default-dispatcher-1077] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.227s.
+2016-12-06 14:42:59,084 INFO	[default-akka.actor.default-dispatcher-1077] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:42:59,163 INFO	[default-akka.actor.default-dispatcher-1084] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.409s.
+2016-12-06 14:42:59,524 INFO	[default-akka.actor.default-dispatcher-1084] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:43:00,455 INFO	[default-akka.actor.default-dispatcher-1077] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.33 seconds
+2016-12-06 14:43:00,455 INFO	[default-akka.actor.default-dispatcher-1077] RTRServer Sending Notify with serial 74 to all clients
+2016-12-06 14:43:00,883 INFO	[default-akka.actor.default-dispatcher-1084] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.574 seconds
+2016-12-06 14:43:00,883 INFO	[default-akka.actor.default-dispatcher-1084] RTRServer Sending Notify with serial 75 to all clients
+2016-12-06 14:43:02,415 INFO	[default-akka.actor.default-dispatcher-1071] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 14:43:05,644 INFO	[default-akka.actor.default-dispatcher-1071] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 6.823s.
+2016-12-06 14:43:05,766 INFO	[default-akka.actor.default-dispatcher-1071] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:43:06,276 INFO	[default-akka.actor.default-dispatcher-1071] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.471 seconds
+2016-12-06 14:43:06,276 INFO	[default-akka.actor.default-dispatcher-1071] RTRServer Sending Notify with serial 76 to all clients
+2016-12-06 14:43:08,846 INFO	[default-akka.actor.default-dispatcher-1084] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:43:08,846 INFO	[default-akka.actor.default-dispatcher-1084] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 14:43:08,888 INFO	[default-akka.actor.default-dispatcher-1084] CacheStore Updated validationTime for 32 objects.
+2016-12-06 14:43:08,925 INFO	[default-akka.actor.default-dispatcher-1101] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:43:08,925 INFO	[default-akka.actor.default-dispatcher-1101] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 14:43:09,123 INFO	[default-akka.actor.default-dispatcher-1084] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.277s.
+2016-12-06 14:43:09,221 INFO	[default-akka.actor.default-dispatcher-1101] CacheStore Updated validationTime for 143 objects.
+2016-12-06 14:43:09,234 INFO	[default-akka.actor.default-dispatcher-1084] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:43:09,813 INFO	[default-akka.actor.default-dispatcher-1084] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.536 seconds
+2016-12-06 14:43:09,814 INFO	[default-akka.actor.default-dispatcher-1084] RTRServer Sending Notify with serial 77 to all clients
+2016-12-06 14:43:09,967 INFO	[default-akka.actor.default-dispatcher-1101] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 1.042s.
+2016-12-06 14:43:10,054 INFO	[default-akka.actor.default-dispatcher-1101] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:43:10,579 INFO	[default-akka.actor.default-dispatcher-1101] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.49 seconds
+2016-12-06 14:43:10,579 INFO	[default-akka.actor.default-dispatcher-1101] RTRServer Sending Notify with serial 78 to all clients
+2016-12-06 14:43:18,806 INFO	[default-akka.actor.default-dispatcher-1098] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:43:18,806 INFO	[default-akka.actor.default-dispatcher-1098] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 14:43:20,572 INFO	[default-akka.actor.default-dispatcher-1098] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 14:43:23,826 INFO	[default-akka.actor.default-dispatcher-1098] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 5.02s.
+2016-12-06 14:43:23,953 INFO	[default-akka.actor.default-dispatcher-1098] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:43:24,473 INFO	[default-akka.actor.default-dispatcher-1098] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.479 seconds
+2016-12-06 14:43:24,473 INFO	[default-akka.actor.default-dispatcher-1098] RTRServer Sending Notify with serial 79 to all clients
+2016-12-06 14:47:56,715 INFO	[default-akka.actor.default-dispatcher-1151] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:47:56,716 INFO	[default-akka.actor.default-dispatcher-1151] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 14:48:07,680 INFO	[default-akka.actor.default-dispatcher-1151] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 14:48:34,820 INFO	[default-akka.actor.default-dispatcher-1151] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 38.104s.
+2016-12-06 14:48:34,918 INFO	[default-akka.actor.default-dispatcher-1151] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:48:35,630 INFO	[default-akka.actor.default-dispatcher-1151] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.67 seconds
+2016-12-06 14:48:35,630 INFO	[default-akka.actor.default-dispatcher-1151] RTRServer Sending Notify with serial 80 to all clients
+2016-12-06 14:53:28,433 INFO	[default-akka.actor.default-dispatcher-1179] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:53:28,433 INFO	[default-akka.actor.default-dispatcher-1179] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 14:53:28,706 INFO	[default-akka.actor.default-dispatcher-1179] CacheStore Updated validationTime for 351 objects.
+2016-12-06 14:53:29,816 INFO	[default-akka.actor.default-dispatcher-1179] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.383s.
+2016-12-06 14:53:29,932 INFO	[default-akka.actor.default-dispatcher-1179] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:53:30,473 INFO	[default-akka.actor.default-dispatcher-1179] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.5 seconds
+2016-12-06 14:53:30,473 INFO	[default-akka.actor.default-dispatcher-1179] RTRServer Sending Notify with serial 81 to all clients
+2016-12-06 14:54:08,720 INFO	[default-akka.actor.default-dispatcher-1207] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:54:08,721 INFO	[default-akka.actor.default-dispatcher-1207] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 14:54:08,745 INFO	[default-akka.actor.default-dispatcher-1212] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:54:08,745 INFO	[default-akka.actor.default-dispatcher-1212] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 14:54:08,760 INFO	[default-akka.actor.default-dispatcher-1212] CacheStore Updated validationTime for 5 objects.
+2016-12-06 14:54:08,780 INFO	[default-akka.actor.default-dispatcher-1198] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:54:08,780 INFO	[default-akka.actor.default-dispatcher-1198] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 14:54:08,960 INFO	[default-akka.actor.default-dispatcher-1212] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.215s.
+2016-12-06 14:54:08,989 INFO	[default-akka.actor.default-dispatcher-1198] CacheStore Updated validationTime for 14 objects.
+2016-12-06 14:54:09,046 INFO	[default-akka.actor.default-dispatcher-1212] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:54:09,373 INFO	[default-akka.actor.default-dispatcher-1198] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.593s.
+2016-12-06 14:54:10,364 INFO	[default-akka.actor.default-dispatcher-1198] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:54:10,395 INFO	[default-akka.actor.default-dispatcher-1212] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.307 seconds
+2016-12-06 14:54:10,395 INFO	[default-akka.actor.default-dispatcher-1212] RTRServer Sending Notify with serial 82 to all clients
+2016-12-06 14:54:11,172 INFO	[default-akka.actor.default-dispatcher-1198] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.753 seconds
+2016-12-06 14:54:11,172 INFO	[default-akka.actor.default-dispatcher-1198] RTRServer Sending Notify with serial 83 to all clients
+2016-12-06 14:54:12,187 INFO	[default-akka.actor.default-dispatcher-1207] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 14:54:15,453 INFO	[default-akka.actor.default-dispatcher-1207] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 6.732s.
+2016-12-06 14:54:15,536 INFO	[default-akka.actor.default-dispatcher-1207] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:54:16,046 INFO	[default-akka.actor.default-dispatcher-1207] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.475 seconds
+2016-12-06 14:54:16,047 INFO	[default-akka.actor.default-dispatcher-1207] RTRServer Sending Notify with serial 84 to all clients
+2016-12-06 14:54:18,789 INFO	[default-akka.actor.default-dispatcher-1207] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:54:18,789 INFO	[default-akka.actor.default-dispatcher-1207] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 14:54:18,797 INFO	[default-akka.actor.default-dispatcher-1206] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:54:18,797 INFO	[default-akka.actor.default-dispatcher-1206] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 14:54:18,842 INFO	[default-akka.actor.default-dispatcher-1206] CacheStore Updated validationTime for 32 objects.
+2016-12-06 14:54:19,057 INFO	[default-akka.actor.default-dispatcher-1206] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.26s.
+2016-12-06 14:54:19,087 INFO	[default-akka.actor.default-dispatcher-1207] CacheStore Updated validationTime for 143 objects.
+2016-12-06 14:54:19,141 INFO	[default-akka.actor.default-dispatcher-1206] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:54:19,717 INFO	[default-akka.actor.default-dispatcher-1206] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.535 seconds
+2016-12-06 14:54:19,717 INFO	[default-akka.actor.default-dispatcher-1206] RTRServer Sending Notify with serial 85 to all clients
+2016-12-06 14:54:19,803 INFO	[default-akka.actor.default-dispatcher-1207] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 1.014s.
+2016-12-06 14:54:19,883 INFO	[default-akka.actor.default-dispatcher-1207] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:54:20,410 INFO	[default-akka.actor.default-dispatcher-1207] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.491 seconds
+2016-12-06 14:54:20,410 INFO	[default-akka.actor.default-dispatcher-1207] RTRServer Sending Notify with serial 86 to all clients
+2016-12-06 14:54:28,781 INFO	[default-akka.actor.default-dispatcher-1241] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:54:28,781 INFO	[default-akka.actor.default-dispatcher-1241] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 14:54:30,649 INFO	[default-akka.actor.default-dispatcher-1241] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 14:54:34,035 INFO	[default-akka.actor.default-dispatcher-1241] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 5.254s.
+2016-12-06 14:54:34,118 INFO	[default-akka.actor.default-dispatcher-1241] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 14:54:34,638 INFO	[default-akka.actor.default-dispatcher-1241] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.448 seconds
+2016-12-06 14:54:34,639 INFO	[default-akka.actor.default-dispatcher-1241] RTRServer Sending Notify with serial 87 to all clients
+2016-12-06 14:59:36,727 INFO	[default-akka.actor.default-dispatcher-1272] CacheStore Updated validationTime for 1 objects.
+2016-12-06 14:59:36,727 INFO	[default-akka.actor.default-dispatcher-1272] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 14:59:48,074 INFO	[default-akka.actor.default-dispatcher-1272] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 15:00:14,803 INFO	[default-akka.actor.default-dispatcher-1272] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 38.076s.
+2016-12-06 15:00:14,946 INFO	[default-akka.actor.default-dispatcher-1272] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:00:15,481 INFO	[default-akka.actor.default-dispatcher-1272] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.491 seconds
+2016-12-06 15:00:15,481 INFO	[default-akka.actor.default-dispatcher-1272] RTRServer Sending Notify with serial 88 to all clients
+2016-12-06 15:01:36,174 INFO	[default-akka.actor.default-dispatcher-1293] BgpRisDumpDownloader BGP entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv4.gz were not modified since 2016-12-06T11:03:17.000+01:00
+2016-12-06 15:01:36,174 INFO	[default-akka.actor.default-dispatcher-1314] BgpRisDumpDownloader BGP entries from http://www.ris.ripe.net/dumps/riswhoisdump.IPv6.gz were not modified since 2016-12-06T11:06:03.000+01:00
+2016-12-06 15:01:36,216 INFO	[default-akka.actor.default-dispatcher-1293] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:01:36,775 INFO	[default-akka.actor.default-dispatcher-1293] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.508 seconds
+2016-12-06 15:04:38,314 INFO	[default-akka.actor.default-dispatcher-1300] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:04:38,314 INFO	[default-akka.actor.default-dispatcher-1300] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 15:04:38,577 INFO	[default-akka.actor.default-dispatcher-1300] CacheStore Updated validationTime for 351 objects.
+2016-12-06 15:04:39,672 INFO	[default-akka.actor.default-dispatcher-1300] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.358s.
+2016-12-06 15:04:39,804 INFO	[default-akka.actor.default-dispatcher-1300] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:04:40,355 INFO	[default-akka.actor.default-dispatcher-1300] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.472 seconds
+2016-12-06 15:04:40,355 INFO	[default-akka.actor.default-dispatcher-1300] RTRServer Sending Notify with serial 89 to all clients
+2016-12-06 15:05:18,733 INFO	[default-akka.actor.default-dispatcher-1347] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:05:18,734 INFO	[default-akka.actor.default-dispatcher-1347] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 15:05:18,760 INFO	[default-akka.actor.default-dispatcher-1331] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:05:18,760 INFO	[default-akka.actor.default-dispatcher-1331] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 15:05:18,769 INFO	[default-akka.actor.default-dispatcher-1329] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:05:18,769 INFO	[default-akka.actor.default-dispatcher-1329] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 15:05:18,809 INFO	[default-akka.actor.default-dispatcher-1329] CacheStore Updated validationTime for 5 objects.
+2016-12-06 15:05:18,829 INFO	[default-akka.actor.default-dispatcher-1331] CacheStore Updated validationTime for 14 objects.
+2016-12-06 15:05:19,001 INFO	[default-akka.actor.default-dispatcher-1329] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.232s.
+2016-12-06 15:05:19,085 INFO	[default-akka.actor.default-dispatcher-1329] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:05:19,189 INFO	[default-akka.actor.default-dispatcher-1331] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.429s.
+2016-12-06 15:05:20,118 INFO	[default-akka.actor.default-dispatcher-1331] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:05:20,452 INFO	[default-akka.actor.default-dispatcher-1329] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.325 seconds
+2016-12-06 15:05:20,452 INFO	[default-akka.actor.default-dispatcher-1329] RTRServer Sending Notify with serial 90 to all clients
+2016-12-06 15:05:21,060 INFO	[default-akka.actor.default-dispatcher-1331] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.722 seconds
+2016-12-06 15:05:21,060 INFO	[default-akka.actor.default-dispatcher-1331] RTRServer Sending Notify with serial 91 to all clients
+2016-12-06 15:05:22,173 INFO	[default-akka.actor.default-dispatcher-1347] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 15:05:25,384 INFO	[default-akka.actor.default-dispatcher-1347] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 6.65s.
+2016-12-06 15:05:25,468 INFO	[default-akka.actor.default-dispatcher-1347] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:05:25,987 INFO	[default-akka.actor.default-dispatcher-1347] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.484 seconds
+2016-12-06 15:05:25,987 INFO	[default-akka.actor.default-dispatcher-1347] RTRServer Sending Notify with serial 92 to all clients
+2016-12-06 15:05:28,733 INFO	[default-akka.actor.default-dispatcher-1347] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:05:28,734 INFO	[default-akka.actor.default-dispatcher-1347] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 15:05:28,756 INFO	[default-akka.actor.default-dispatcher-1349] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:05:28,756 INFO	[default-akka.actor.default-dispatcher-1349] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 15:05:28,797 INFO	[default-akka.actor.default-dispatcher-1347] CacheStore Updated validationTime for 32 objects.
+2016-12-06 15:05:29,023 INFO	[default-akka.actor.default-dispatcher-1347] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.289s.
+2016-12-06 15:05:29,066 INFO	[default-akka.actor.default-dispatcher-1349] CacheStore Updated validationTime for 143 objects.
+2016-12-06 15:05:29,108 INFO	[default-akka.actor.default-dispatcher-1347] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:05:29,673 INFO	[default-akka.actor.default-dispatcher-1347] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.484 seconds
+2016-12-06 15:05:29,673 INFO	[default-akka.actor.default-dispatcher-1347] RTRServer Sending Notify with serial 93 to all clients
+2016-12-06 15:05:29,806 INFO	[default-akka.actor.default-dispatcher-1349] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 1.05s.
+2016-12-06 15:05:29,936 INFO	[default-akka.actor.default-dispatcher-1349] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:05:30,432 INFO	[default-akka.actor.default-dispatcher-1349] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.455 seconds
+2016-12-06 15:05:30,432 INFO	[default-akka.actor.default-dispatcher-1349] RTRServer Sending Notify with serial 94 to all clients
+2016-12-06 15:05:38,745 INFO	[default-akka.actor.default-dispatcher-1332] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:05:38,746 INFO	[default-akka.actor.default-dispatcher-1332] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 15:05:40,472 INFO	[default-akka.actor.default-dispatcher-1332] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 15:05:44,088 INFO	[default-akka.actor.default-dispatcher-1332] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 5.341s.
+2016-12-06 15:05:44,176 INFO	[default-akka.actor.default-dispatcher-1332] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:05:44,848 INFO	[default-akka.actor.default-dispatcher-1332] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.632 seconds
+2016-12-06 15:05:44,848 INFO	[default-akka.actor.default-dispatcher-1332] RTRServer Sending Notify with serial 95 to all clients
+2016-12-06 15:11:16,732 INFO	[default-akka.actor.default-dispatcher-1398] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:11:16,732 INFO	[default-akka.actor.default-dispatcher-1398] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 15:11:27,504 INFO	[default-akka.actor.default-dispatcher-1398] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 15:11:53,634 INFO	[default-akka.actor.default-dispatcher-1398] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 36.902s.
+2016-12-06 15:11:53,770 INFO	[default-akka.actor.default-dispatcher-1398] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:11:54,337 INFO	[default-akka.actor.default-dispatcher-1398] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.526 seconds
+2016-12-06 15:11:54,337 INFO	[default-akka.actor.default-dispatcher-1398] RTRServer Sending Notify with serial 96 to all clients
+2016-12-06 15:15:48,376 INFO	[default-akka.actor.default-dispatcher-1437] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:15:48,377 INFO	[default-akka.actor.default-dispatcher-1437] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 15:15:48,709 INFO	[default-akka.actor.default-dispatcher-1437] CacheStore Updated validationTime for 351 objects.
+2016-12-06 15:15:49,812 INFO	[default-akka.actor.default-dispatcher-1437] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.435s.
+2016-12-06 15:15:49,946 INFO	[default-akka.actor.default-dispatcher-1437] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:15:50,468 INFO	[default-akka.actor.default-dispatcher-1437] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.486 seconds
+2016-12-06 15:15:50,469 INFO	[default-akka.actor.default-dispatcher-1437] RTRServer Sending Notify with serial 97 to all clients
+2016-12-06 15:16:28,680 INFO	[default-akka.actor.default-dispatcher-1458] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:16:28,681 INFO	[default-akka.actor.default-dispatcher-1458] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 15:16:28,749 INFO	[default-akka.actor.default-dispatcher-1451] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:16:28,749 INFO	[default-akka.actor.default-dispatcher-1451] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 15:16:28,754 INFO	[default-akka.actor.default-dispatcher-1462] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:16:28,754 INFO	[default-akka.actor.default-dispatcher-1462] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 15:16:28,779 INFO	[default-akka.actor.default-dispatcher-1451] CacheStore Updated validationTime for 5 objects.
+2016-12-06 15:16:28,799 INFO	[default-akka.actor.default-dispatcher-1462] CacheStore Updated validationTime for 14 objects.
+2016-12-06 15:16:28,967 INFO	[default-akka.actor.default-dispatcher-1451] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.218s.
+2016-12-06 15:16:29,050 INFO	[default-akka.actor.default-dispatcher-1451] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:16:29,157 INFO	[default-akka.actor.default-dispatcher-1462] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.403s.
+2016-12-06 15:16:30,181 INFO	[default-akka.actor.default-dispatcher-1462] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:16:30,455 INFO	[default-akka.actor.default-dispatcher-1451] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.365 seconds
+2016-12-06 15:16:30,455 INFO	[default-akka.actor.default-dispatcher-1451] RTRServer Sending Notify with serial 98 to all clients
+2016-12-06 15:16:30,874 INFO	[default-akka.actor.default-dispatcher-1462] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.574 seconds
+2016-12-06 15:16:30,874 INFO	[default-akka.actor.default-dispatcher-1462] RTRServer Sending Notify with serial 99 to all clients
+2016-12-06 15:16:32,234 INFO	[default-akka.actor.default-dispatcher-1458] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 15:16:35,344 INFO	[default-akka.actor.default-dispatcher-1458] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 6.663s.
+2016-12-06 15:16:35,459 INFO	[default-akka.actor.default-dispatcher-1458] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:16:36,033 INFO	[default-akka.actor.default-dispatcher-1458] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.537 seconds
+2016-12-06 15:16:36,033 INFO	[default-akka.actor.default-dispatcher-1458] RTRServer Sending Notify with serial 100 to all clients
+2016-12-06 15:16:38,763 INFO	[default-akka.actor.default-dispatcher-1477] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:16:38,764 INFO	[default-akka.actor.default-dispatcher-1477] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 15:16:38,791 INFO	[default-akka.actor.default-dispatcher-1458] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:16:38,792 INFO	[default-akka.actor.default-dispatcher-1458] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 15:16:38,804 INFO	[default-akka.actor.default-dispatcher-1477] CacheStore Updated validationTime for 32 objects.
+2016-12-06 15:16:39,017 INFO	[default-akka.actor.default-dispatcher-1477] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.253s.
+2016-12-06 15:16:39,068 INFO	[default-akka.actor.default-dispatcher-1458] CacheStore Updated validationTime for 143 objects.
+2016-12-06 15:16:39,109 INFO	[default-akka.actor.default-dispatcher-1477] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:16:39,874 INFO	[default-akka.actor.default-dispatcher-1477] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.669 seconds
+2016-12-06 15:16:39,875 INFO	[default-akka.actor.default-dispatcher-1477] RTRServer Sending Notify with serial 101 to all clients
+2016-12-06 15:16:39,932 INFO	[default-akka.actor.default-dispatcher-1458] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 1.14s.
+2016-12-06 15:16:40,016 INFO	[default-akka.actor.default-dispatcher-1458] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:16:40,665 INFO	[default-akka.actor.default-dispatcher-1458] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.612 seconds
+2016-12-06 15:16:40,665 INFO	[default-akka.actor.default-dispatcher-1458] RTRServer Sending Notify with serial 102 to all clients
+2016-12-06 15:16:48,778 INFO	[default-akka.actor.default-dispatcher-1499] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:16:48,778 INFO	[default-akka.actor.default-dispatcher-1499] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 15:16:50,460 INFO	[default-akka.actor.default-dispatcher-1499] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 15:16:53,861 INFO	[default-akka.actor.default-dispatcher-1499] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 5.083s.
+2016-12-06 15:16:53,948 INFO	[default-akka.actor.default-dispatcher-1499] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:16:54,585 INFO	[default-akka.actor.default-dispatcher-1499] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.566 seconds
+2016-12-06 15:16:54,585 INFO	[default-akka.actor.default-dispatcher-1499] RTRServer Sending Notify with serial 103 to all clients
+2016-12-06 15:22:56,751 INFO	[default-akka.actor.default-dispatcher-1537] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:22:56,751 INFO	[default-akka.actor.default-dispatcher-1537] ValidationProcess Loaded trust anchor RIPE NCC RPKI Root from location rsync://rpki.ripe.net/ta/ripe-ncc-ta.cer, starting validation
+2016-12-06 15:23:07,406 INFO	[default-akka.actor.default-dispatcher-1537] CacheStore Updated validationTime for 16732 objects.
+2016-12-06 15:23:33,181 INFO	[default-akka.actor.default-dispatcher-1537] ValidationProcess Finished validating RIPE NCC RPKI Root, 16732 valid objects; spent 36.43s.
+2016-12-06 15:23:33,312 INFO	[default-akka.actor.default-dispatcher-1537] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:23:33,865 INFO	[default-akka.actor.default-dispatcher-1537] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.512 seconds
+2016-12-06 15:23:33,865 INFO	[default-akka.actor.default-dispatcher-1537] RTRServer Sending Notify with serial 104 to all clients
+2016-12-06 15:26:58,318 INFO	[default-akka.actor.default-dispatcher-1572] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:26:58,318 INFO	[default-akka.actor.default-dispatcher-1572] ValidationProcess Loaded trust anchor AfriNIC RPKI Root from location rsync://rpki.afrinic.net/repository/AfriNIC.cer, starting validation
+2016-12-06 15:26:58,590 INFO	[default-akka.actor.default-dispatcher-1572] CacheStore Updated validationTime for 351 objects.
+2016-12-06 15:26:59,689 INFO	[default-akka.actor.default-dispatcher-1572] ValidationProcess Finished validating AfriNIC RPKI Root, 351 valid objects; spent 1.371s.
+2016-12-06 15:26:59,789 INFO	[default-akka.actor.default-dispatcher-1572] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:27:00,307 INFO	[default-akka.actor.default-dispatcher-1572] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.483 seconds
+2016-12-06 15:27:00,307 INFO	[default-akka.actor.default-dispatcher-1572] RTRServer Sending Notify with serial 105 to all clients
+2016-12-06 15:27:38,789 INFO	[default-akka.actor.default-dispatcher-1600] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:27:38,789 INFO	[default-akka.actor.default-dispatcher-1600] ValidationProcess Loaded trust anchor APNIC from AFRINIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-afrinic-origin.cer, starting validation
+2016-12-06 15:27:38,810 INFO	[default-akka.actor.default-dispatcher-1581] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:27:38,811 INFO	[default-akka.actor.default-dispatcher-1581] ValidationProcess Loaded trust anchor APNIC from LACNIC RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-lacnic-origin.cer, starting validation
+2016-12-06 15:27:38,821 INFO	[default-akka.actor.default-dispatcher-1588] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:27:38,821 INFO	[default-akka.actor.default-dispatcher-1588] ValidationProcess Loaded trust anchor LACNIC RPKI Root from location rsync://repository.lacnic.net/rpki/lacnic/rta-lacnic-rpki.cer, starting validation
+2016-12-06 15:27:38,859 INFO	[default-akka.actor.default-dispatcher-1581] CacheStore Updated validationTime for 5 objects.
+2016-12-06 15:27:38,883 INFO	[default-akka.actor.default-dispatcher-1600] CacheStore Updated validationTime for 14 objects.
+2016-12-06 15:27:39,060 INFO	[default-akka.actor.default-dispatcher-1581] ValidationProcess Finished validating APNIC from LACNIC RPKI Root, 5 valid objects; spent 0.248s.
+2016-12-06 15:27:39,142 INFO	[default-akka.actor.default-dispatcher-1581] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:27:39,288 INFO	[default-akka.actor.default-dispatcher-1600] ValidationProcess Finished validating APNIC from AFRINIC RPKI Root, 14 valid objects; spent 0.499s.
+2016-12-06 15:27:39,575 INFO	[default-akka.actor.default-dispatcher-1600] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:27:40,502 INFO	[default-akka.actor.default-dispatcher-1581] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 1.319 seconds
+2016-12-06 15:27:40,502 INFO	[default-akka.actor.default-dispatcher-1581] RTRServer Sending Notify with serial 106 to all clients
+2016-12-06 15:27:40,998 INFO	[default-akka.actor.default-dispatcher-1600] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.636 seconds
+2016-12-06 15:27:40,998 INFO	[default-akka.actor.default-dispatcher-1600] RTRServer Sending Notify with serial 107 to all clients
+2016-12-06 15:27:42,319 INFO	[default-akka.actor.default-dispatcher-1588] CacheStore Updated validationTime for 3336 objects.
+2016-12-06 15:27:45,473 INFO	[default-akka.actor.default-dispatcher-1588] ValidationProcess Finished validating LACNIC RPKI Root, 3336 valid objects; spent 6.652s.
+2016-12-06 15:27:45,591 INFO	[default-akka.actor.default-dispatcher-1588] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:27:46,110 INFO	[default-akka.actor.default-dispatcher-1588] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.481 seconds
+2016-12-06 15:27:46,110 INFO	[default-akka.actor.default-dispatcher-1588] RTRServer Sending Notify with serial 108 to all clients
+2016-12-06 15:27:48,766 INFO	[default-akka.actor.default-dispatcher-1619] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:27:48,766 INFO	[default-akka.actor.default-dispatcher-1619] ValidationProcess Loaded trust anchor APNIC from RIPE RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-ripe-origin.cer, starting validation
+2016-12-06 15:27:48,794 INFO	[default-akka.actor.default-dispatcher-1618] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:27:48,794 INFO	[default-akka.actor.default-dispatcher-1618] ValidationProcess Loaded trust anchor APNIC from ARIN RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-arin-origin.cer, starting validation
+2016-12-06 15:27:48,834 INFO	[default-akka.actor.default-dispatcher-1619] CacheStore Updated validationTime for 32 objects.
+2016-12-06 15:27:49,050 INFO	[default-akka.actor.default-dispatcher-1619] ValidationProcess Finished validating APNIC from RIPE RPKI Root, 32 valid objects; spent 0.284s.
+2016-12-06 15:27:49,092 INFO	[default-akka.actor.default-dispatcher-1618] CacheStore Updated validationTime for 143 objects.
+2016-12-06 15:27:49,135 INFO	[default-akka.actor.default-dispatcher-1619] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:27:49,714 INFO	[default-akka.actor.default-dispatcher-1619] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.538 seconds
+2016-12-06 15:27:49,714 INFO	[default-akka.actor.default-dispatcher-1619] RTRServer Sending Notify with serial 109 to all clients
+2016-12-06 15:27:49,792 INFO	[default-akka.actor.default-dispatcher-1618] ValidationProcess Finished validating APNIC from ARIN RPKI Root, 143 valid objects; spent 0.998s.
+2016-12-06 15:27:49,948 INFO	[default-akka.actor.default-dispatcher-1618] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:27:50,435 INFO	[default-akka.actor.default-dispatcher-1618] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.449 seconds
+2016-12-06 15:27:50,435 INFO	[default-akka.actor.default-dispatcher-1618] RTRServer Sending Notify with serial 110 to all clients
+2016-12-06 15:27:58,773 INFO	[default-akka.actor.default-dispatcher-1614] CacheStore Updated validationTime for 1 objects.
+2016-12-06 15:27:58,774 INFO	[default-akka.actor.default-dispatcher-1614] ValidationProcess Loaded trust anchor APNIC from IANA RPKI Root from location rsync://rpki.apnic.net/repository/apnic-rpki-root-iana-origin.cer, starting validation
+2016-12-06 15:28:00,723 INFO	[default-akka.actor.default-dispatcher-1614] CacheStore Updated validationTime for 2605 objects.
+2016-12-06 15:28:03,946 INFO	[default-akka.actor.default-dispatcher-1614] ValidationProcess Finished validating APNIC from IANA RPKI Root, 2605 valid objects; spent 5.172s.
+2016-12-06 15:28:04,064 INFO	[default-akka.actor.default-dispatcher-1614] BgpAnnouncementValidator Started validating 694271 BGP announcements with 28538 RTR prefixes.
+2016-12-06 15:28:04,631 INFO	[default-akka.actor.default-dispatcher-1614] BgpAnnouncementValidator Completed validating 694271 BGP announcements with 28538 RTR prefixes in 0.496 seconds
+2016-12-06 15:28:04,631 INFO	[default-akka.actor.default-dispatcher-1614] RTRServer Sending Notify with serial 111 to all clients
+2016-12-06 15:30:03,977 INFO	[shutdownHook1] RTRServer RTR server stopped
+2016-12-06 15:30:03,983 INFO	[shutdownHook2] ServerConnector Stopped ServerConnector@7c18432b{HTTP/1.1}{0.0.0.0:8080}
+2016-12-06 15:30:03,998 INFO	[shutdownHook2] ContextHandler Stopped o.e.j.s.ServletContextHandler@62f87c44{/,jar:file:/home/colin/projects/shell/ripe-rtr-validator/v2/rpki-validator-app-2.23/lib/rpki-validator-app-2.23.jar!/public,UNAVAILABLE}
+2016-12-06 15:30:04,003 INFO	[shutdownHook2] Main Terminating...
