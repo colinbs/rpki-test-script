@@ -1,0 +1,9 @@
+# directories
+rpki-validator-app-*/
+results/
+
+# files
+*.txt
+*.temp
+*.formatted
+

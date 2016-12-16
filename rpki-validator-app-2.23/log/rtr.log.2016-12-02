@@ -1,8 +1,0 @@
-2016-12-02 17:40:17,760 INFO 	Client connected : /0:0:0:0:0:0:0:1:57464
-2016-12-02 17:40:17,793 INFO 	Client connected : /0:0:0:0:0:0:0:1:57466
-2016-12-02 17:40:17,795 INFO 	Client disconnected : /0:0:0:0:0:0:0:1:57464
-2016-12-02 17:44:35,924 INFO 	Client disconnected : /0:0:0:0:0:0:0:1:57466
-2016-12-02 17:45:35,237 INFO 	Client connected : /0:0:0:0:0:0:0:1:57592
-2016-12-02 17:45:35,238 INFO 	Client disconnected : /0:0:0:0:0:0:0:1:57592
-2016-12-02 17:45:35,239 INFO 	Client connected : /0:0:0:0:0:0:0:1:57594
-2016-12-02 17:47:33,554 INFO 	Client disconnected : /0:0:0:0:0:0:0:1:57594
