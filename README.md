@@ -3,7 +3,8 @@
 * [jq](https://stedolan.github.io/jq/) - command line parser for JSON. Necessary to parse the results of the RIPE validator.
 * [bgpdump](http://www.ris.ripe.net/source/bgpdump/) - RIB dump to BGP converter.
 * [bzip2](http://bzip.org/) - Tool to decompress a RIB dump.
-* [rpki-validator-app](https://www.ripe.net/manage-ips-and-asns/resource-management/certification/tools-and-resources) - RIPE RPKI Validator.
+<!--* [rpki-validator-app](https://www.ripe.net/manage-ips-and-asns/resource-management/certification/tools-and-resources) - RIPE RPKI Validator.-->
+* [RTRTestsuite](https://github.com/rtrlib/rtr-testsuite/releases/tag/0.0.1) - RTR Test Suite based on the RPKI RIPE Validator.
 
 
 # Containing Files
@@ -50,9 +51,18 @@ To decompress use the `bzip2` tool:
 
 This command will get rid of the original dump. To preserve it add the -k option.
 
-The main script _rpki-validator_ takes the decompressed RIB dump as a parameter, as well as the host and port of the cache. If the cache is running locally with the default configuration of the RIPE RPKI Validator is "_localhost_" on port "_8282_".
+Next, download, extract and start the RTR Test Suite on a port of your choice, e.g. 8181:
 
-    ./rpki-validator.sh rib.dump host port
+    tar -xzf RTRTestsuite-0.0.1-SNAPSHOT-dist.tar.gz
+    ./RTRTestsuite-0.0.1-SNAPSHOT/rtr-testsuite.sh 8181
+
+You will be prompted with a CLI. Type `help` for all options. Now the ROAs must be added to the cache of the testing environment. There is a _roas_ file in the root of this repository which can be used. You can add additional entries to the file in the format '\[ASN\] \[Prefix\] \[MaxLen\]'. Then, enter into the CLI:
+
+    addfile path/to/roa/file
+
+Open a new Terminal. The main script _rpki-validator_ takes the decompressed RIB dump as a parameter, as well as the host and port of the cache. Use _localhost_ for <host> and the port used to start the RTRTestsuite for <port>:
+
+    ./rpki-validator.sh rib.dump <host> <port>
 
 
 # Analyzing the result
