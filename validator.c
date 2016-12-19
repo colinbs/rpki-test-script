@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "rtrlib/rtrlib.h"
+#include "rtrlib/pfx/lpfst/lpfst-pfx.h"
 
 int main(int argc, char *argv[]) {
 
@@ -149,8 +150,30 @@ int main(int argc, char *argv[]) {
 		struct lrtr_ip_addr pref;
 		lrtr_ip_str_to_addr(ip, &pref);
 
+        struct pfx_record *reason = NULL;
+        unsigned int reason_len = 0;
+
 		enum pfxv_state result;
-		rtr_mgr_validate(conf, asn_i, &pref, len_i, &result);
+        pfx_table_validate_r(groups[0].sockets[0]->pfx_table, &reason, &reason_len, asn_i, &pref, len_i, &result);
+		//rtr_mgr_validate(conf, asn_i, &pref, len_i, &result);
+        
+        // TODO: unmanaged code!
+        if (reason && (reason_len > 0)) {
+            unsigned int i;
+
+            for (i = 0; i < reason_len; i++) {
+                char tmp[100];
+
+                lrtr_ip_addr_to_str(&reason[i].prefix, tmp, sizeof(tmp));
+                printf("%u %s %u %u",
+                    reason[i].asn, tmp,
+                    reason[i].min_len,
+                    reason[i].max_len
+                );
+                if ((i + 1) < reason_len)
+                    printf(",");
+            }
+        }
 
 		// Write the routes to the corresponding files.
 		if(result == BGP_PFXV_STATE_VALID) {
