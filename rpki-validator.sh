@@ -27,14 +27,11 @@ if [ ! -f "$rib_csv" ]; then
 fi
 
 # the old state of the RTRlib
-LD_PRELOAD=libs/librtr-old/librtr.so ./rtr-validator $1.formatted old-result.txt $2 $3
-
-# the trie fix by Andreas
-LD_PRELOAD=libs/librtr-trie/librtr.so ./rtr-validator $1.formatted trie-result.txt $2 $3
-
-# the fix by Sebastian
-LD_PRELOAD=libs/librtr-fix/librtr.so ./rtr-validator $1.formatted fix-result.txt $2 $3
-
+for i in libs/*; do
+	name=$(echo $i| cut -d "/" -f 2)
+	export LD_PRELOAD=$i/librtr.so
+	./rtr-validator $1.formatted $name-result.txt $2 $3
+done
 # cleanup
 printf "Cleanup..."
 #rm $1.temp $1.formatted
