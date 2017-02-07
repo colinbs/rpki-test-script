@@ -1,61 +1,39 @@
 printf "Prepare temp files for analysis..."
 awk '{ print $NF }' $1 >> $1.short
 awk '{ print $NF }' $2 >> $2.short
+awk '{ print $NF }' $3 >> $3.short
 
 sed 's/\"//g' $1.short > $1.short.tmp
 sed 's/\"//g' $2.short > $2.short.tmp
+sed 's/\"//g' $3.short > $3.short.tmp
 
-:|paste -d' ' $1.short.tmp - $2.short.tmp > $1.$2.merge.txt
+:|paste -d' ' $1.short.tmp - $2.short.tmp - $3.short.tmp > merge.txt
 
-sed 's/\s\+/ /g' $1.$2.merge.txt > $1.$2.merge.txt.tmp
-sed 's/\"//g' $1.$2.merge.txt.tmp > $1.$2.merge.txt
+sed 's/\s\+/ /g' merge.txt > merge.txt.tmp
+sed 's/\"//g' merge.txt.tmp > merge.txt
 printf " done!\n"
 
-maxlines=$( wc -l $1.$2.merge.txt | awk '{ print $1 }' )
+maxlines=$( wc -l merge.txt | awk '{ print $1 }' )
 counter=1
-notfoundtoinvalid=0
-notfoundtovalid=0
-invalidtovalid=0
-invalidtonotfound=0
 
+printf "%-18s %-6s | %-8s | %-8s | %-8s\n" "Prefix/Length" "ASN" "lpfst" "trie" "RPKI" > statistics.txt
+echo "----------------------------------------------------------" >> statistics.txt
 printf "Analyze data..."
-while read -r column1 column2
+while read -r column1 column2 column3
 do
-    if [ "$column1" = "NotFound" -a "$column2" = "Invalid" ]
+    if [ "$column1" != "$column2" -o "$column1" != "$column3" ]
     then
-        notfoundtoinvalid=$((notfoundtoinvalid+1))
+        line=$( sed -n "$counter p" $1 | awk '{ print $1 " " $2 }' )
+        #echo -e "$line\t\t|\t$column1\t|\t$column2\t|\t$column3" >> statistics.txt
+        printf "%-18s %-6s | %-8s | %-8s | %-8s\n" $line $column1 $column2 $column3 >> statistics.txt
     fi
-
-    if [ "$column1" = "Invalid" -a "$column2" = "NotFound" ]
-    then
-        invalidtonotfound=$((invalidtonotfound+1))
-    fi
-
-    if [ "$column1" = "NotFound" -a "$column2" = "Valid" ]
-    then
-        notfoundtovalid=$((notfoundtovalid+1))
-    fi
-
-    if [ "$column1" = "Invalid" -a "$column2" = "Valid" ]
-    then
-        invalidtovalid=$((invalidtovalid+1))
-    fi
-
     counter=$((counter+1))
-    #echo "$column1 $column2"
     echo -ne "${counter}/${maxlines} lines processed.\r"
 
-done < $1.$2.merge.txt
+done < merge.txt
 
-echo "Compared $1 with $2" > statistics.txt
-echo "" >> statistics.txt
-echo "Prefixes..." >> statistics.txt
-echo "announced Invalid in $1 -> announced NotFound in $2: $invalidtonotfound" >> statistics.txt
-echo "announced NotFound in $1 -> announced Invalid in $2: $notfoundtoinvalid" >> statistics.txt
-echo "announced NotFound in $1 -> announced Valid in $2: $notfoundtovalid" >> statistics.txt
-echo "announced Invalid in $1 -> announced Valid in $2: $invalidtovalid" >> statistics.txt
 printf " \ndone!\n"
 
 printf "Cleanup temp data..."
-rm $1.short* $2.short* $1.$2.merge*
+rm *.short* merge*
 printf " done!\n"

@@ -49,7 +49,7 @@ To decompress use the `bzip2` tool:
 
     bzip2 -d filename.bz2
 
-This command will get rid of the original dump. To preserve it add the -k option.
+This command will get rid of the original dump. To preserve it, add the -k option.
 
 Next, download, extract and start the RTR Test Suite on a port of your choice, e.g. 8181:
 
@@ -69,16 +69,6 @@ Open a new Terminal. The main script _rpki-validator_ takes the decompressed RIB
 
 After the script successfully finished there will now be three new files with the results. Compare them by executing the _analysis_ script:
 
-    ./analysis.sh old-result.txt fix-result.txt
+    ./analysis.sh lpfst-result.txt trie-result.txt rpki-result.txt
 
-In this case, the output will be the statistics.txt file. It will contain the following data (example values):
-
-    Compared old-result.txt with fix-result.txt
-
-    Prefixes...
-    announced Invalid in old-result.txt -> announced NotFound in trie-result.txt: 0
-    announced NotFound in old-result.txt -> announced Invalid in trie-result.txt: 279
-    announced NotFound in old-result.txt -> announced Valid in trie-result.txt: 1286
-    announced Invalid in old-result.txt -> announced Valid in trie-result.txt: 253
-
-The order in which the script will receive its arguments is important for the outcome. To compare into the other direction, switch the order of the arguments.
+The output file _statistics.txt_ will contain all ROAs from which the validation result differs from each other and show the validation results for lpfst, trie and the RIPE RPKI validator.
