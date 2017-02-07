@@ -28,8 +28,11 @@ LD_PRELOAD=/home/colin/projects/shell/ripe-rtr-validator/v2/libs/librtr-lpfst/li
 # the trie implementation of the RTRlib
 LD_PRELOAD=/home/colin/projects/shell/ripe-rtr-validator/v2/libs/librtr-trie/librtr.so ./rtr-validator $1.formatted trie-result.txt $2 $3
 
+# the spfst implementation of the RTRlib
+LD_PRELOAD=/home/colin/projects/shell/ripe-rtr-validator/v2/libs/librtr-spfst/librtr.so ./rtr-validator $1.formatted spfst-result.txt $2 $3
+
 # the RIPE RPKI validator implementation
-sh validate-ripe.sh $1.formatted
+# sh validate-ripe.sh $1.formatted
 
 # cleanup
 printf "Cleanup..."
